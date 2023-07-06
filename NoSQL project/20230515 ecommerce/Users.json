@@ -1,0 +1,18 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Sam",
+      "passWord": "Sam12345",
+      "phoneNumber": 2468101214,
+      "homePage": "www.blog1.com"
+    },
+    {
+      "id": 2,
+      "name": "Tom",
+      "passWord": "19960105",
+      "phoneNumber": 1357911131,
+      "homePage": "www.blog2.com"
+    }
+  ]
+}

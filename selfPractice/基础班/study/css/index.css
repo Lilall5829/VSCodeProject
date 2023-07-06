@@ -1,0 +1,408 @@
+/* 美化首页 */
+/* wrapper 版心 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* 内减模式 */
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+.clearfix::before,.clearfix::after{
+    content: '';
+    display: table;
+}
+.clearfix::after{
+    clear: both;
+}
+.wrapper{
+    width: 1200px;
+    margin: 0 auto;
+}
+body{
+    background-color: #f3f5f7;
+}
+/* 头部 */
+.header{
+    /* margin: 30px 0; 这种写法会导致版心auto值不生效,最好写margin: 30px auto */
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 42px;
+    /* background-color: red; */
+}
+/* 导航 */
+.nav{
+    float: left;
+    margin-left: 70px;
+    height: 18px;
+}
+h1{
+    float: left;
+}
+/* 选中nav中的li浮动 */
+.nav li{
+    float: left;
+    margin-right: 26px;
+    padding: 0 9px;
+    /* 这个也可以加到a里，通过display:block 使a具有高度，增加用户体验 */
+}
+.nav li:hover{
+border-bottom: 2px solid #00a4ff;
+}
+.nav li a{
+    line-height: 40px;
+	font-family: MicrosoftYaHei;
+	font-size: 18px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 2px;
+	color: #050505;
+}
+/* 搜索框 */
+.search{
+    float: left;
+    margin-left: 59px;
+    width: 412px;
+	height: 42px;
+	border: solid 1px #00a4ff;
+    text-align: center;
+}
+.search input{
+    float: left;
+    padding-left: 21px;
+    width: 360px;
+    height: 40px;
+    border: 0;
+}
+/* placehoder里的文本样式设置 */
+.search input::placeholder{
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 31px;
+	letter-spacing: 0px;
+	color: #bfbfbf;
+}
+.search button{
+    float: right;
+    width: 50px;
+	height: 40px;
+    background-image: url(../images/btn.png);
+    border: 0;
+}
+/* 用户头像和姓名不便于给定宽度 */
+.user{
+    float: right;
+    margin-left: 35px;
+    height: 42px;
+    line-height: 42px;
+}
+.user img{
+    vertical-align: middle;
+    /* 调节图片垂直居中方式 */
+}
+.user span{
+    margin-left: 6px;
+	width: 81px;
+	height: 14px;
+	font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1px;
+	color: #666666;
+}
+/* 轮播图 */
+.banner{
+    height: 420px;
+    background-color: #1c036c;
+}
+.banner .wrapper{
+    height: 420px;
+    background-image: url(../images/banner2.png);
+}
+.banner .left{
+    float: left;
+    padding: 28px 20px;
+    width: 190px;
+    height: 420px;
+    /* 用RGBA写法的原因是防止子元素继承透明度导致文字也透明 */
+    background-color: rgba(0,0,0,0.3);
+    /* 行高属性能继承，写在父元素里方便 */
+}
+.banner .left li:nth-child(-n+8){
+    margin-bottom: 29.75px;
+}
+.banner .left a{
+    display: block;
+    line-height: 1;
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 1px;
+	color: #fff;
+}
+.banner .left a:hover{
+    color: #00b4ff;
+}
+.banner .left span{
+    float: right;
+}
+.banner .right{
+    float: right;
+    margin-top: 50px;
+    width: 228px;
+	height: 300px;
+	background-color: #ffffff;
+}
+.banner .top{
+    width: 231px;
+    height: 48px;
+    background-color: #9bceea;
+    text-align: center;
+    font-family: MicrosoftYaHei-Bold;
+	font-size: 18px;
+	font-weight: bold;
+	font-stretch: normal;
+	line-height: 48px;
+	letter-spacing: 2px;
+	color: #ffffff;
+}
+.banner .body{
+    padding: 0 18px;
+    height: 189px;
+}
+.banner .body li{
+    padding: 14px 0;
+    height: 63px;
+    background-color: #fff;
+    border-bottom: solid #e5e5e5;
+}
+.banner .body li .li-left{
+    display: block;
+    float: left;
+    margin-right: 5px;
+    font-size: 16px;
+    line-height: 16px;
+    text-align: left;
+    color: #4e4e4e;
+}
+.banner .body li .li-right{
+    display: block;
+    /* float: left; */
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    color: #4e4e4e;
+}
+.banner .body li h3{
+    margin-top: 3px;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: left;
+    color: #4e4e4e;
+}
+.banner .right button{
+    margin: 4px 14px 0;
+    width: 200px;
+	height: 41px;
+	border: solid 1px #00a4ff;
+    background-color: #fff;
+    font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: bold;
+	font-stretch: normal;
+	letter-spacing: 2px;
+	color: #00a4ff;
+}
+.goods{
+    margin-top: 8px;
+    padding: 21px 34px 21px 28px;
+    width: 1200px;
+	height: 60px;
+	background-color: #ffffff;
+	box-shadow: 0px 2px 3px 0px 
+		rgba(118, 118, 118, 0.2);
+}
+.goods h3{
+    float: left;
+    padding-right: 35px;
+    /* width: 123px;
+    height: 18px; */
+    font-family: MicrosoftYaHei-Bold;
+	font-size: 16px;
+    line-height: 18px;
+    color: #00a4ff;
+    border-right: solid 1px #bfbfbf;
+}
+.goods li a{
+    float: left;
+    padding: 0 35px;
+    font-family: MicrosoftYaHei;
+	font-size: 16px;
+    line-height: 18px;
+    color: #000;
+    border-right: solid 1px #bfbfbf;
+}
+.goods a{
+    float: right;
+    font-size: 14px;
+    line-height: 18px;
+    color: #00a4ff;
+}
+/* 精品课程 */
+.course{
+    margin-top: 37px;
+    overflow: hidden;
+}
+.title{
+    height: 40px;
+}
+.title h3{
+    float: left;
+    font-family: MicrosoftYaHei;
+	font-size: 20px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #494949;
+}
+.title a{
+    float: right;
+    margin-right: 35px;
+    font-family: MicrosoftYaHei;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #a5a5a5;
+}
+.course .content li{
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 228px;
+	height: 270px;
+	background-color: #ffffff;
+    box-shadow: 0px 2px 5px 0px 
+		rgba(118, 118, 118, 0.5);
+}
+.course .content li:nth-child(5n){
+    margin-right: 0;
+}
+.course .content h3{
+    margin: 20px 20px 0 24px;
+    font-family: MicrosoftYaHei;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 20px;
+	letter-spacing: 0px;
+	color: #050505;
+}
+.course .content div{
+    margin: 16px 84px 27px 23px;
+    line-height: 12px;
+}
+.course .content .left{
+    font-family: MicrosoftYaHei;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #ff7c2d;
+} 
+.course .content .right{
+    font-family: MicrosoftYaHei;
+	font-size: 12px;
+	font-weight: normal;
+	letter-spacing: 0px;
+	color: #999999;
+}
+.copyright{
+    margin-top: 30px;
+    padding-top: 30px;
+    width: 1200px;
+	height: 417px;
+	background-color:#fff;
+    overflow: hidden;
+}
+.copyright .left{
+    float: left;
+}
+
+.copyright .left p{
+    margin-top: 20px;
+    font-family: SimSun;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 18px;
+	letter-spacing: 0px;
+	color: #666666;
+}
+.copyright .left button{
+    margin-top: 15px;
+    width: 120px;
+    height: 36px;
+    background-color: #fff;
+    border: solid 1px #00a4ff;
+    font-family: MicrosoftYaHei;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 18px;
+	letter-spacing: 0px;
+	color: #00a4ff;
+}
+.copyright .right{
+    float: right;
+}
+.copyright h3{
+    font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 21px;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.copyright ul{
+    margin-top: 15px;
+}
+.copyright li{
+    font-family: SimSun;
+	font-size: 12px;
+	font-weight: normal;
+	font-stretch: normal;
+	line-height: 21px;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.copyright .about{
+    float: left;
+    margin-right:146px;
+}
+.copyright .guidance{
+    float: left;
+    margin-right:123px;
+}
+.copyright .company{
+    float: left;
+    margin-right:33px;
+}
+/* hot定位小图 */
+.course .content li{
+    position: relative;
+}
+.course .content li .hot{
+    position: absolute;
+    right: -4px;
+    top: 4px;
+}

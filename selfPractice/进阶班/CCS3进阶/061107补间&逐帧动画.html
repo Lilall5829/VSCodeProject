@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 逐帧动画animation-timing-function:step(数字) 把动画过程等分成N份 
+    除了配合精灵图是逐帧动画外，其他动画基本都是补间动画，比如时钟指针连续平滑的转圈
+    制作精灵动画步骤：
+    1、准备显示区域：尺寸是精灵图上一张一个小图的尺寸
+    2、定义动画：改变背景图的位置（移动的距离就是整个精灵图的宽度）
+    3、使用动画：添加速度曲线steps(N),与精灵图上小图个数相同，添加无限重复效果-->
+    <!-- 多组动画：
+    animation:
+        动画1， 
+        动画2，
+        动画N
+    ；
+    -->
+
+    <style>
+        .box{
+            width: 140px;
+            height: 140px;
+            background-image: url(./img/bg.png);
+            animation: move 1s steps(12) infinite,
+            run 2s linear forwards;
+        }
+        @keyframes move{
+            from{
+                background-position: 0 0;
+            }
+            to{
+                background-position: -1680px 0;
+            }
+        }
+        /* 定义一个box移动800px的动画 */
+        @keyframes run{
+            from{
+                transform: translateX(0);
+            }
+            to{
+                transform: translateX(800px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

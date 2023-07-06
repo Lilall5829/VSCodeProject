@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 元素显示模式转换：改变元素默认的显示特点，让元素符合布局要求，具体属性如下：
+    display:block 转换成块级元素 使用频率较多
+    display:inline-block 转换成行内块元素 较多
+    display:inline 转成行内元素  极少 -->
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            background-color: red;
+            /* display: inline-block */
+            display: inline;
+        }
+        span{
+            background-color: blue;
+            /* display: block; */
+            display: inline-block;
+            width: 300px;
+            height: 300px;
+        }
+    </style>
+</head>
+<body>
+    <div>div标签</div>
+    <div>div标签</div>
+    <div>div标签</div>
+    <span>span</span>
+    <span>span</span>
+</body>
+</html>

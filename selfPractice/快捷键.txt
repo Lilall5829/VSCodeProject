@@ -1,0 +1,7 @@
+shift+delete 删除整行
+ctrl+Enter 换行
+shift+alt+向下 复制当前行到下一行
+ctrl+D 选中当前行重复的内容
+shift+ctrl+F 快速格式化代码
+shift+alt+鼠标左键 同时选取多个位置，方便在不同位置插入同样的代码
+Less块注释，快捷键shift + alt + A

@@ -1,0 +1,122 @@
+// out:../css/
+@import './base.less';
+@import './normalize.less';
+//变量存储37.5
+@unit:37.5rem;
+
+body{
+    background-color: #f0f0f0;
+}
+
+.main{
+    padding-bottom: (50 / @unit);
+    .banner{
+        img{
+            width: 100%;
+            height:(160 / @unit) ;
+        }
+    }
+    .title{
+        height: (40 / @unit);
+        line-height: (40 / @unit);
+        padding-left: (15 / @unit);
+        h5{
+            font-size: (14 / @unit);
+            color: #3c3c3c;
+        }
+    }
+    .item{
+        margin-bottom: (10 / @unit);
+        .pic{
+            position: relative;
+            width: 100%;
+            height: (160 / @unit);
+            i{
+                position: absolute;
+                top:(15 / @unit);
+                right:(18 / @unit);
+                color: #fff;
+                font-size: (24 / @unit);
+            }
+            .active{
+                position: absolute;
+                top:(-2 / @unit);
+                left:(15 / @unit);
+                width: (68 / @unit);
+                height: (29 / @unit);
+                background-image: url(../images/status_active.png);
+                background-size:contain;
+                font-size: (12 / @unit);
+                color: #fff;
+                text-align: center;
+                line-height: (29 / @unit);
+                //设置灰色图片样式
+                &.off{
+                background-image: url(../images/status_default.png);
+                }
+            }
+
+        }
+        .txt{
+            padding: (10 / @unit) (15 / @unit);
+            background-color: #fff;
+            .top{
+                display: flex;
+                justify-content: space-between;
+                line-height: (21 / @unit);
+                h5{
+                    font-size: (15 / @unit);
+                    font-weight: normal;
+                    width: (290 / @unit);
+                }
+                span{
+                    font-size: (15 / @unit);
+                    color: #FE6249;
+                }
+            }
+            .bottom{
+                display: flex;
+                margin-top: (14 / @unit);
+                p{  
+                    margin-right: (15 / @unit) ;
+                    line-height: (11 / @unit);
+                    color: #b4b4b4;
+                    font-size: (11 / @unit);
+                    i{
+                        font-size: (11 / @unit);
+                    }
+                }
+            }
+        }
+    }
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: (50 / @unit);
+    background-color: #FECA49;
+    text-align: center;
+    a{
+        color: #D78B09;
+/*         i{
+            font-size: (24 / @unit);
+        }
+        标签选择器权重太低不生效 */
+        .iconfont{
+            font-size: (24 / @unit);
+        }
+        p{
+            font-size: (11 / @unit);
+        }
+        &.current{
+            color: #fefefe;
+        }
+    }
+
+}

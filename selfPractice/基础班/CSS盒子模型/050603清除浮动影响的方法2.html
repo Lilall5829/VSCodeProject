@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 方法3:单伪元素清除法（工作中常用）
+    操作：用伪元素替代了额外标签，基本写法和补充写法见下例-->
+    <style>
+        .top{
+            margin: 0 auto;
+            width: 500px;
+            /* height: 300px; */
+            background-color: pink;
+        }
+        .bottom{
+            margin: 0 auto;
+            width: 700px;
+            height: 30px;
+            background-color: blue;
+        }
+        .left{
+            float: left;
+            width: 100px;
+            height: 300px;
+            background-color: #ccc;
+        }
+        .right{
+            float: right;
+            width: 390px;
+            height: 300px;
+            background-color: red;
+        }
+        .clearfix::after{
+            content: '';
+            display: block;
+            clear:both;
+            /* 以上部分为基本写法，为了兼容性补充写法如下，在网页中看不到伪元素 */
+            height: 0;
+            visibility: hidden;
+            /* 隐藏浮动 */
+        }
+    </style>
+</head>
+<body>
+    <div class="top clearfix">
+        <!-- 同时调用top clearfix类 -->
+        <div class="left"></div>
+        <div class="right"></div>
+    </div>
+    <div class="bottom"></div>
+</body>
+</html>

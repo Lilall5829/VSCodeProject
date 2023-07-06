@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 方法1：直接设置父元素高度。但有些布局中不能固定父元素高度，例如新闻列表、京东推荐模块等
+    方法2：额外标签法 
+    操作：首先，在父元素内容的最后添加一个块级元素(类名一般是clearfix)，其次，给添加的块级元素设置clear:both/left/right
+    缺点是会让页面结构变得复杂-->
+    <style>
+        .top{
+            margin: 0 auto;
+            width: 500px;
+            /* height: 300px; */
+            background-color: pink;
+        }
+        .bottom{
+            margin: 0 auto;
+            width: 700px;
+            height: 30px;
+            background-color: blue;
+        }
+        .left{
+            float: left;
+            width: 100px;
+            height: 300px;
+            background-color: #ccc;
+        }
+        .right{
+            float: right;
+            width: 390px;
+            height: 300px;
+            background-color: red;
+        }
+        .clearfix{
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+    <div class="top">
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="clearfix"></div>
+    </div>
+    <div class="bottom"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 子元素默认继承父元素样式的特点，文本相关的属性都可以继承
+    eg. color font系列 text系列 line系列等
+    可以通过调试工具判断样式是否可以继承 
+    两种继承失效的特殊情况，其实是就近原则和子标签自身的属性冲突了
+    1、a标签的color会继承失效
+    2、h系列标签的font-size会继承失效-->
+    <style>
+        div{
+            color: red;
+            height: 50px;
+            font-size: 30px;
+            line-height: 500px;
+        }
+    </style>
+</head>
+<body>
+   <div>
+       div
+       <p>p</p>
+       <a href="">a标签</a>
+       <h1>h1标签</h1>
+   </div> 
+</body>
+</html>

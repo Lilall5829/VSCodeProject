@@ -1,0 +1,18 @@
+{
+  "comments": [
+    {
+      "id": 1,
+      "userId": 2,
+      "bolgId": 1,
+      "content": "What a good blog!",
+      "createTime": 20230531
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "bolgId": 3,
+      "content": "I really like your blog!",
+      "createTime": 20230601
+    }
+  ]
+}

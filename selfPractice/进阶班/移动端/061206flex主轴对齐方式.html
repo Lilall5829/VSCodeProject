@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 修改主轴对齐方式justify-content
+    属性值： flex-start默认值，起点开始依次排列 flex-end终点开始依次排列 center沿主轴居中排列，无间距 space-around沿主轴均匀排列，空白间距均分在弹性盒子两侧 space-between沿主轴均匀排列，空白间距均分在弹性盒子之间 space-evenly沿主轴均匀排列，弹性盒子之间，与容器之间间距相等-->
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      .box {
+        display: flex;
+        justify-content: space-around;
+        height: 200px;
+        border: 1px solid #000;
+      }
+      .box div {
+        /* float: left; */
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+    </div>
+  </body>
+</html>

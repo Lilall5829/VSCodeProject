@@ -1,0 +1,21 @@
+<storeBook sid="123", bid="001">
+    <price>
+    </price>
+    <stock>
+    </stock>
+</storeBook>
+<store sid="124">
+
+    <name>
+    </name>
+    <phone>
+    </phone>
+</store>
+<book bid="125">
+    <title>
+    xml
+    </title>
+    <authors>
+    lila
+    </authors>
+</book>

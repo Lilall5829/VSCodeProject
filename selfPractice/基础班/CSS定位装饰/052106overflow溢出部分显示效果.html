@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 溢出部分：指盒子内容部分超出盒子范围的区域 overflow 
+    取值 hidden溢出部分隐藏,解决外边距塌陷和浮动问题
+    scroll无论是否溢出都显示滚动条
+    auto根据是否溢出，自动显示或隐藏滚动条 -->
+    <style>
+        .box{
+            width: 400px;
+            height: 400px;
+            background-color: pink;
+            overflow: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa是的是的aaaaaaaaasdasdasdasdasdadsadaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdasdasdasdasdadsadasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdasdasdasdasdadsadasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdasdasdasdasdadsadasdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaasdasdasdasdasdadsadasdaaasdaa</div>
+</body>
+</html>

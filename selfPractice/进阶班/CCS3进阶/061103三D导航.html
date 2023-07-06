@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .navs{
+            margin: 50px auto;
+            width: 300px;
+            height: 40px;
+        }
+        .navs ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .navs li{
+            position: relative;
+            width: 100px;
+            height: 40px;
+            float: left;
+            line-height: 40px;
+            transform-style: preserve-3d;
+            transition: all 1s;
+        }
+        .navs li a{
+            position: absolute;
+            left: 0;
+            top: 0;
+            display: block;
+            width: 100px;
+            height: 40px;
+            text-align: center;
+            color: #fff;
+            text-decoration: none;
+        }
+        .navs li a:first-child{
+            background-color: green;
+            transform: translateZ(20px);
+        }
+        .navs li a:last-child{
+            background-color: orange;
+            transform: rotateX(90deg) translateZ(20px) ;
+        }
+        .navs li:hover{
+            transform: rotateX(-90deg) scale3d(.5,.5,2);
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="navs">
+        <ul>
+            <li>
+                <a href="#">首页</a>
+                <a href="#">index</a>
+            </li>
+            <li>
+                <a href="#">登录</a>
+                <a href="#">login</a>
+            </li>
+            <li>
+                <a href="#">注册</a>
+                <a href="#">Register</a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

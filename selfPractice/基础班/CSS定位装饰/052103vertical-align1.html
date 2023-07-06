@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 垂直对齐方式 vertical-align 处理行内/行内块元素和文字之间的对齐,因为浏览器把行内和行内块元素当作文字处理，默认基线对齐，所以存在对不齐的情况，块元素不存在这个问题
+    属性值： baseline默认基线对齐 top顶对齐 middle居中 bottom底线-->
+    <style>
+        .father{
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+            line-height: 600px;
+        }
+        img{
+            vertical-align: middle;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        asasdasd
+    <img src="./images/1.jpg" alt="">
+    </div>
+</body>
+</html>

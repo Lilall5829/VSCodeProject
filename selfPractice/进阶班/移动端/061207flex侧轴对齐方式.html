@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 使用align-items调节元素在侧轴布局，添加到弹性容器中
+    属性值：flex-start默认值，起点开始依次排列 flex-end终点开始依次排列 center沿侧轴居中排列 stretch是默认值，如果弹性盒子没高度，会沿着主轴线被拉伸至铺满弹性容器
+    如果没给宽，弹性盒子就是内容的宽度
+     -->
+     <!-- 使用align-self单独设置某个弹性盒子的侧轴对齐方式 -->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            display: flex;
+            align-items: stretch;
+            height: 300px;
+            border: 1px solid #000;
+        }
+        .box div{
+            width: 100px;
+            /* height: 100px; */
+            background-color: pink;
+        }
+        .box div:nth-child(2){
+            align-self: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

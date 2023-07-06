@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 设备宽度不同，HTML标签字号设置多少合适？
+    视口宽度的1/10-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 当视口宽度为375时，设置1html = 37.5px生效 */
+        @media(width:375px){
+            html{
+            font-size: 37.5px;
+            }
+        }
+        /* 当视口宽度为320时，设置1html = 32px生效 */
+        @media(width:320px){
+            html{
+            font-size: 32px;
+            }
+        }
+        /* 宽为5rem = 5html = 100px，高类推 */
+        .box{
+            width: 5rem;
+            height: 3rem;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

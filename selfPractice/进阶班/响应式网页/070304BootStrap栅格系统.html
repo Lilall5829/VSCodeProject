@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <!-- 栅格系统把网页等分为12份，每个内容占12份中的份数
+            超小屏幕    小屏幕    中等屏幕    大屏幕
+    尺寸    <768px    >=768px   >=992px  >=1200px
+    容器宽度  100%      750px     970px     1170px
+    类名  col-xs-份数  col-sm-份数   col-md-份数  col-lg-份数
+    -->
+    <style>
+        .container div{
+            height: 50px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 需求：大屏：一行排列4个内容；中屏：一行排列2个内容 -->
+    <div class="container">
+        <div class="col-lg-3 col-md-6">1</div>
+        <div class="col-lg-3 col-md-6">2</div>
+        <div class="col-lg-3 col-md-6">3</div>
+        <div class="col-lg-3 col-md-6">4</div>
+    </div>
+</body>
+</html>

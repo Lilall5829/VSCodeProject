@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 使用flex属性修改盒子伸缩比
+    属性值：为数值，指占用父元素剩余尺寸的几分之几,同一个父元素下的子元素份数在计算时要叠加-->
+    
+     <style>
+     *{
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        display: flex;
+        height: 200px;
+        border: 1px solid #000;
+    }
+    .box div{
+        margin: 0 20px;
+        height: 100px;
+        background-color: pink;
+    }
+    .box div:nth-child(1){
+        width: 50px;
+    }
+    /* 把父元素剩余尺寸(刨掉child1后)分为4份，child2占3/4，child3占1/4 */
+    .box div:nth-child(2){
+        flex: 3;
+    }
+    .box div:nth-child(3){
+        flex: 1;
+    }
+</style>
+</head>
+<body>
+<div class="box">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+</div>
+</body>
+</html>

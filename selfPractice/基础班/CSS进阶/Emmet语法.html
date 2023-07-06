@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            /* 输入fs: font-size: large; */
+            /* 输入bc：border-color: aliceblue; */
+            /* 输入w300+h200+bgc输出如下 */
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+        }
+    </style>
+</head>
+<body>
+        <!-- 直接输入.box就能生成<div class="box"></div> -->
+    <!-- 直接输入p.box就会生成<p class="box"></p> -->
+    <!-- 输入p.box#id就会生成<p class="box" id="id"></p> -->
+    <div></div>
+    <p></p>
+    <!-- 输入div+p就会生成同级的div和p标签 -->
+    <div>
+        <p></p>
+    </div>
+    <!-- 输入div>p就会生成父子集的div和p标签 -->
+    <!-- 输入p*3就会生成三个p -->
+    <!-- 输入div>p{asd}*3就会生成如下-->
+    <div>
+        <p>asd</p>
+        <p>asd</p>
+        <p>asd</p>
+    </div>
+     <!-- 输入div>p{$}*3就会生成如下-->
+    <div>
+        <p>1</p>
+        <p>2</p>
+        <p>3</p>
+    </div>
+</body>
+</html>

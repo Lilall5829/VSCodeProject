@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 使用rem单位设置网页元素的尺寸，特点如下：
+    1、是相对单位
+    2、rem单位是相对于HTML标签的字号(根字号)计算结果
+    3、1rem = 1HTML字号大小 -->
+    <!-- 使用媒体查询设置差异化CSS样式，根据不同的视口宽度，设置不同的根字号，类似于if语句：
+    语法 @media (媒体特性，比如视口宽度) {
+            选择器{
+                CSS属性
+            }
+        } 
+    电脑的显示设置成100%才能看到！-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* 当视口宽度为375时，设置1html = 40px生效 */
+        @media(width:375px){
+            html{
+            font-size: 40px;
+            }
+        }
+        /* 当视口宽度为320时，设置1html = 30px生效 */
+        @media(width:320px){
+            html{
+            font-size: 30px;
+            }
+        }
+        /* 宽为5rem = 5html = 100px，高类推 */
+        .box{
+            width: 5rem;
+            height: 3rem;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

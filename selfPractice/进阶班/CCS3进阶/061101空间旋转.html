@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 空间旋转 transform:rotateZ()，即绕着Z轴旋转和平面旋转效果一样
+    transform:rotateX/Y()，围绕X/Y进行空间旋转 
+    左手法则：判断旋转方向的正方向，左手握住旋转轴，拇指指向正值方向，手指弯曲方向为旋转正值方向
+    -->
+    <style>
+        .box{
+            width: 300px;
+            margin: 100px auto;
+            perspective: 1000px;
+        }
+        img{
+            width: 300px;
+            transition: all 1s;
+        }
+        .box img:hover{
+            /* transform:rotateZ(360deg); */
+            /* transform:rotateX(360deg);*/
+            transform-origin:left bottom;
+            transform: rotateY(360deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <img src="./img/logo.png" alt="">
+    </div>
+</body>
+</html>

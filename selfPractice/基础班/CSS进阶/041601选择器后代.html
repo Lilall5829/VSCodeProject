@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 后代选择器：根据HMTL标签的嵌套关系，在选择器1所找到的选择器2标签后代（一二三n代都行）设置样式
+    语法：选择器1 选择器2{} -->
+    <style>
+        div p{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p>这是一个p标签</p>
+    <div>
+        <p>这是div标签的子标签p</p>
+        <p>这是div标签的子标签p</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 块级元素外边距折叠现象——塌陷现象：互相塌陷的块级元素，子元素的margin-top会作用在父元素上，最终父元素也跟着一起往下移动，解决方案如下：
+    1、给父元素设置border-top或padding-top（分隔父子元素的margin-top）
+    2、给父元素设置overflow:hidden(最合适的解决方案)
+    3、转换成行内元素
+    4、设置浮动-->
+    <style>
+      .one {
+        width: 300px;
+        height: 300px;
+        background-color: pink;
+        /* overflow: hidden; */
+      }
+      .two {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        margin-top: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">
+      <div class="two">22222</div>
+    </div>
+  </body>
+</html>

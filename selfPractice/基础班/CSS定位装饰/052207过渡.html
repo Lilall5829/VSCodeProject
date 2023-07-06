@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- transition 让元素样式慢慢变化，配合hover使用，增强网页交互体验
+    属性 all所有能过渡的属性都过渡，width只有宽有过渡 时长：数字+s
+    添加在要变化的元素里 -->
+    <style>
+        .box{
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* transition: width 1s,background-color 2s; */
+            transition: all 2s;
+        }
+        .box:hover{
+            width: 600px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

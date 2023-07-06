@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .content{
+            margin: auto;
+            width: 1226px;
+            height: 614px;
+            /* background-color: red; */
+        }
+        .left{
+            float: left;
+            margin-right: 14px;
+            width: 234px;
+            height: 614px;
+            background-color: #800080;
+        }
+        /* .right{
+            float:right;
+            width: 978px;
+            height: 614px;
+            background-color:green;
+        } */
+        ul{
+            list-style: none;
+        }
+        li{
+            float: left;
+            margin:0 14px 14px 0;
+            width: 234px;
+            height: 300px;
+            background-color: #87ceeb;
+        }
+        li:nth-child(4n){
+            margin-right: 0;
+        }
+        .test{
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <div class="left"></div>
+        <!-- <div class="right"> -->
+           <ul>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+               <li></li>
+           </ul>
+        <!-- </div> -->
+    </div>
+    <br>
+    <div class="test">浮动元素的位置受到同级同向浮动元素的影响。也就是说同一父级中有多个浮动元素，后一个元素的位置会受到前一个浮动元素位置的影响，他们不会相互遮挡，后一个浮动元素会紧挨着前一个浮动元素的左外边距进行定位，如果当前空间不足，则会换行，否则会放置在前一个浮动元素的下面</div>
+</body>
+</html>

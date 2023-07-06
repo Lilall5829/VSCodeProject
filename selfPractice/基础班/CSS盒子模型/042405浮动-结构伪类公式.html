@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- E:nth-child(n){} 
+    其中n可以为：0 1 2 3 4 5 6 ... 也可以为常见公式如下（n自动从0递增）：
+    偶数 2n even
+    奇数 2n+1 2n-1 odd
+    找到前5个 -n+5
+    找到从第5个往后 n+5
+    -->
+    <style>
+        li:nth-child(-n+6){
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>这是第1个li</li>
+        <li>这是第2个li</li>
+        <li>这是第3个li</li>
+        <li>这是第4个li</li>
+        <li>这是第5个li</li>
+        <li>这是第6个li</li>
+        <li>这是第7个li</li>
+        <li>这是第8个li</li>
+    </ul>
+</body>
+</html>

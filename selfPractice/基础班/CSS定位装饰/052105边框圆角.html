@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 让盒子四角圆圆 border-radius
+    取值 数字px、百分比（最大为50%）
+    赋值顺序：一般只给一个值，否则左上角开始顺时针复制，没有赋值的看对角
+    正圆：半径=正方盒子边长的一半（50%）
+    胶囊按钮：长方形盒子高度（短边）的一半（50%）-->
+    <style>
+        .box{
+            width: 200px;
+            height: 400px;
+            background-color: pink;
+            /* border-radius: 200px; */
+            border-radius: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

@@ -1,0 +1,218 @@
+/*  common.css网站中多个网页相同模块的重复样式，如：头部，底部 */
+/* 各个页面相同的样式表 : 头, 尾部 */
+/* 版心 */
+.wrapper {
+    width: 1240px;
+    margin: 0 auto;
+}
+.shortcut{
+    width: 1920px;
+    height: 52px;
+	background-color: #333
+}
+.shortcut ul{
+    float: right;
+}
+.shortcut li{
+    position: relative;
+    float: left;
+    line-height: 52px;
+}
+.shortcut li:nth-child(7) a{
+    padding-right: 0;
+    padding-left: 35px;
+    border-right: 0;
+}
+.shortcut li a{
+    padding: 0 16px;
+    font-family: PingFangSC-Regular;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #dcdcdc;
+    border-right: solid 1px #666;
+}
+.shortcut li span{
+    position: absolute;
+    top: 18px;
+    left: 16px;
+    display: inline-block;
+    width: 11px;
+    height: 16px;
+    background-image: url(../images/sprites.png);
+    background-position: -160px -70px;
+}
+.header{
+    width: 1920px;
+    height: 130px;
+	background-color: #fff;
+}
+.header .wrapper .logo{
+    float: left;
+    width: 207px;
+    height: 70px;
+    margin-top: 30px;
+}
+/* 搜索引擎优化，将a的字体大小设置为0，即可隐藏 */
+.header .wrapper .logo a{
+    display: block;
+    width: 207px;
+    height: 70px;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 0;
+}
+.header .wrapper ul{
+    float: left;
+    margin: 53px 0 50px 40px;
+}
+.header .wrapper li{
+    float: left;
+    margin-right: 48px;
+}
+.header .wrapper li a{
+    padding-bottom: 8px;
+	font-family: PingFangSC-Regular;
+	font-size: 16px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #333333;
+}
+.header .wrapper li a:hover{
+    border-bottom: solid 1px #27ba9b;
+    color: #27ba9b;
+}
+.header .wrapper .search{
+    position: relative;
+    float: left;
+    margin: 54px 0 42px 34px;
+    border-bottom: solid 2px #e7e7e7;
+}
+.header .wrapper input{
+    padding-left: 32px;
+    width: 172px;
+	height: 32px;
+}
+.header .wrapper input::placeholder{
+    font-family: PingFangSC-Regular;
+	font-size: 14px;
+	font-weight: normal;
+	font-stretch: normal;
+	letter-spacing: 0px;
+	color: #cccccc;
+}
+.header .wrapper .search .lens{
+    position: absolute;
+    top: 5px;
+    left: 2px;
+    width: 18px;
+    height: 18px;
+    background-color: #fff;
+    background-image: url(../images/sprites.png);
+    background-position: -80px -70px;
+} 
+.header .wrapper .cart{
+    position: relative;
+    display: inline-block;
+    margin: 62px 0 45px 14px;
+    width: 22px;
+    height: 22px;
+    background-image: url(../images/sprites.png);
+    background-position: -120px -70px;
+}
+.header .wrapper .cart .number{
+    position: absolute;
+    bottom: 13px;
+    left: 15px;
+    width: 20px;
+	height: 15px;
+    line-height: 15px;
+	background-color: #e26237;
+	border-radius: 8px;
+    font-family: PingFangSC-Medium;
+	font-size: 13px;
+	color: #ffffff;
+    text-align: center;
+}
+.footer{
+    width: 1920px;
+    height: 343px;
+    background-color: #333;
+}
+.footer .wrapper{
+    width: 1393px;
+}
+.footer .wrapper .slogan{
+    padding-top: 60px;
+    padding-bottom: 55px;
+    height: 174px;
+    border-bottom: solid 1px #999;
+}
+.footer .wrapper .slogan div{
+    float: left;
+    width: 464px;
+    height: 58px;
+}
+.footer .wrapper .slogan span{
+    float: left;
+    margin-left: 135px;
+    width: 58px;
+    height: 58px;
+}
+.footer .wrapper .slogan h1{
+    float: left;
+    margin-left: 19px;
+    line-height: 58px;
+    font-family: PingFangSC-Light;
+	font-size: 28px;
+	font-weight: normal;
+	color: #ffffff;
+}
+.footer .wrapper .slogan .one span{
+    background-image: url(../images/sprites.png);
+    background-position: 0 0;
+}
+.footer .wrapper .slogan .two span{
+    background-image: url(../images/sprites.png);
+    background-position: -65px 0;
+}
+.footer .wrapper .slogan .three span{
+    background-image: url(../images/sprites.png);
+    background-position: -131px 0;
+}
+
+.footer .wrapper .copyright{
+    padding-top: 41px;
+    height: 169px;
+}
+.footer .wrapper .copyright ul{
+    height: 14px;
+}
+.footer .wrapper .copyright li{
+    float: left;
+    padding: 0 11px;
+    border-left: solid 1px #999;
+    line-height: 14px;
+}
+.footer .wrapper .copyright li:first-child{
+    padding-left: 428px;
+    border-left: 0;
+}
+.footer .wrapper .copyright li:last-child{
+    padding-right: 0;
+}
+.footer .wrapper .copyright li a{
+    font-size: 14px;
+    color: #999;
+}
+.footer .wrapper .copyright div{
+    margin-top: 20px;
+    text-align: center;
+    line-height: 14px;
+    font-size: 14px;
+    font-family: PingFangSC-Light;
+    color: #999;
+}

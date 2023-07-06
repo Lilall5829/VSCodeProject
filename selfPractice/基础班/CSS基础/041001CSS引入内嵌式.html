@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* CSS的注释长这样 */
+        /* CSS 的引入方式：
+        1、内嵌式：通常使用style标签，放在head标签里，能对当前页面所有被选择的标签起作用，适合小案例
+        2、外联式：css属性写在单独的.css文件中，需通过link标签放在head标签里引入css文件，能对多个页面引用，适合做项目
+        3、行内式：写在标签的style属性中，只能对当前标签起作用，配合js使用*/
+        /* 选择器{css属性} 功能是查找标签 */
+        p{
+            /* 文字颜色变红 */
+            color:blue;
+            /* 字变大 */
+            font-size: 30px;
+            /* 背景颜色 */
+            background-color: crimson;
+            /* width height */
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <p>这是一个p标签</p>
+    <div style="color:blue; width:300px">这是一个div标签</div>
+</body>
+</html>

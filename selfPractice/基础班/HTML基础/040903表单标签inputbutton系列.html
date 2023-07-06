@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- input系列：收集输入的信息，type属性值包括：
+    text 文本框 placeholder属性：占位符，提示用户输入内容的文本，可以加到各种框里
+    password 密码框
+    radio 单选框 name属性：分组，有相同name属性值的单选框为一组，一组只能选中一个 checked属性：默认选中，也能用于多选框
+    checkbox 多选框
+    file 文件，用于上传文件 multiple 可以选择多个文件
+    submit 提交，和重置一样需要表单域标签form将重置也包括进去，action填写地址 value 给按钮上添加提示文字，也能用于reset
+    reset 重置 
+    button 普通按钮，默认无功能，可配合js添加功能 
+    -->
+    <form action="">
+        文本框：<input type="text" placeholder="请输入傻乎乎">
+        <br>密码框：<input type="password">
+        <br>单选框：
+        <input type="radio" name="gender" checked>female 
+        <input type="radio" name="gender">male
+        <br>多选框：
+        <input type="checkbox" name="aa">嗷嗷
+        <input type="checkbox" checked name="aa">啊啊
+        <br>文件：<input type="file" multiple>
+        <br>普通按钮：<input type="button" value="傻乎乎">
+        <br>重置：<input type="reset" value=eeeerrr>
+        <br>提交：<input type="submit" value="asasa">
+    </form>
+    <!-- button标签，和JS配合方便，比input系列好用有submit/reset/buttom三种type属性 -->
+    <button type="reset">重置按钮</button>
+    <button type="submit">提交按钮</button>
+    <button type="button">普通按钮</button>
+</body>
+</html>

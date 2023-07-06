@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- animation: 动画名称 动画时长 速度曲线(linear匀速/steps(n)动画分n步进行) 延迟时间 动画重复播放次数（infinite无限循环播放） 动画方向(alternate反向播放) 执行完毕时状态(与infinite/alternate冲突，默认为t停留在初始状态backwards,停留在最终状态为forwards) 
+    名称和时长必须赋值
+    取值不分先后顺序
+    如果有两个时间值，第一个表示动画时长，第二个表示延迟时间
+    以上属性也可以拆开写，例如animation-name/duration/iteration-count等等
+    动画效果暂停，一般加在hover里：animation-play-state:paused;
+    -->
+    <style>
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            animation: change 1s steps(3) 1s forwards;
+        }
+       @keyframes change{
+            from{
+                width: 200px;
+            }
+            to{
+                width: 600px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
+</head>
+<body>
+    
+</body>
+</html>

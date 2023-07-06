@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 根据设备宽度的变化，设置差异化样式 max-width（最大值为，不能大于这个值）/min-width（最小值为，不能小于这个值）
+    存在多个值时，需要特别注意书写顺序：mix-width 从小到大写 max-width 从大到小写-->
+    <style>
+        /* 视口宽度小于等于768px,网页背景色是粉色 */
+        @media(max-width:768px){
+            body{
+                background-color: pink;
+            }
+        }
+         /* 视口宽度大于等于1200px,网页背景色是绿色 */
+         @media(min-width:1200px){
+            body{
+                background-color: green;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+</body>
+</html>

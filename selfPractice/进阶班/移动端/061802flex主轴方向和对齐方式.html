@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--在主轴改变的情况下，实现水平居中
+    需要先考虑主轴方向，y轴为主轴时，主轴居中为align-items: center-->
+    <style>
+        div{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content:space-between;
+            width: 200px;
+            height: 200px;
+            border: solid 1px;
+        }
+        span{
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>哈哈哈</span>
+        <span>hahahah</span>
+    </div>
+</body>
+</html>

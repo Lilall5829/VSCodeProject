@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 定义类选择器：.类名{css属性名：属性值} */
+        /* 通过类名找到页面中所有带有这个类名的标签设置样式；
+        所有标签上都有class属性，通过改变class属性值来改变标签的类名；
+        类名可以由数字、字母、下划线、中划线组成，不能以数字或者中划线开头；
+        一个标签可以同时有多个类名，类名之间以空格隔开，如果类属性冲突了，以style标签中定义在后的为准 */
+        .size{
+            font-size: 100px;
+        }
+        .blue{
+            color: blue;
+        }
+        .red{
+            color:red;
+        }
+    </style>
+</head>
+<body>
+    <p class="red blue">111</p>
+    <p>222</p>
+    <div class="red size">333</div>
+</body>
+</html>

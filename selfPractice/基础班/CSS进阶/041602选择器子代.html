@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 子代选择器：根据HMTL标签的嵌套关系，在选择器1所找到的选择器2标签子代设置样式
+    语法：选择器1>选择器2{} -->
+    <style>
+        div>a{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        div标签
+        <a href="">div标签的a</a>
+        <p>
+            <a href="">div标签里的p标签的a标签</a>
+        </p>
+    </div>
+</body>
+</html>

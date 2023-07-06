@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  box-sizing: border-box;
+}
+li {
+  list-style: none;
+}
+h2 {
+  line-height: 3;
+  color: brown;
+}
+body {
+  margin: 20px auto;
+  width: 900px;
+  height: 1200px;
+}
+header {
+  font-weight: bolder;
+  font-size: 46px;
+  line-height: 2;
+  color: brown;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 100px;
+  line-height: 3;
+  background-color: beige;
+}
+nav div a {
+  font-weight: 700;
+  color: #800d29;
+}
+nav div a:hover {
+  color: blueviolet;
+}
+/* .container {
+  margin: 0 auto;
+} */
+main {
+  float: left;
+  width: 70%;
+}
+
+main .bgi {
+  background-image: url(./1.jpg);
+  background-size: cover;
+}
+.text {
+  padding-top: 70px;
+  height: 400px;
+  line-height: 2;
+  color: white;
+  background-color: rgba(128, 5, 5, 0.5);
+}
+.text button {
+  margin-top: 10px;
+  width: 100px;
+  height: 50px;
+  border-color: white;
+  color: white;
+  background-color: #800d29;
+  font-weight: 700;
+}
+main h2 {
+  /* margin: px auto; */
+  background-color: beige;
+}
+aside {
+  float: right;
+  padding: 15px 15px;
+  width: 30%;
+}
+aside h2 {
+  font-family: "Times New Roman", Times, serif;
+  background-color: beige;
+}
+
+aside li {
+  line-height: 1.5;
+}
+aside .white {
+  background-color: #800d29;
+}
+aside .white a {
+  color: white;
+}
+aside a {
+  font-family: "Times New Roman", Times, serif;
+}
+
+footer {
+  clear: both;
+  line-height: 2;
+  color: white;
+  background-color: chocolate;
+}

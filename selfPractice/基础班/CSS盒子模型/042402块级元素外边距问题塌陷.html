@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 块级元素外边距折叠现象——合并现象：垂直布局的块级元素，上下的margin会合并，最终两者距离为margin的最大值，因此只给其中一个盒子设置margin即可 -->
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+        .one{
+            margin-bottom: 50px;
+        }
+        .two{
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">11111</div>
+    <div class="two">22222</div>
+</body>
+</html>

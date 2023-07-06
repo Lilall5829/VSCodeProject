@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 行内块元素显示特点
+    1、一行可以显示多个
+    2、可以设置宽高
+    eg. input textarea button select
+    img也有行内块特点，但Chrome调试显示是inline -->
+    <style>
+        img{
+            width: 400px;
+            height: 400px;
+        }
+        input{
+            width: 300px;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./3.png" alt="">
+    <img src="./3.png" alt="">
+    <input type="radio" name="gender" checked>female
+    <input type="radio" name="gender">male
+</body>
+</html>

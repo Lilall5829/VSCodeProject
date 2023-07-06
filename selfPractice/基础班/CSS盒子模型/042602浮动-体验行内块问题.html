@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--为什么本例子中两个标签之间会有空隙：浏览器在解析行内块或行内标签时，如果代码换行，会默认加一个空格 -->
+    <style>
+        div{
+            width: 100px;
+            height: 200px;
+            display: inline-block;
+        }
+        .one{
+            background-color: pink;
+        }
+        .two{
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 每个标签都可以称为一个“盒子”，浏览器渲染网页时，将网页中的元素看作一个个矩形区域，即为盒子
+    CSS规定每个盒子由：内容区域（content）， 内边距区域（padding），边框区域（border），外边距区域（margin）-->
+    <!-- 盒子尺寸= w + h + border*2 -->
+    <style>
+        div{
+            width: 300px;
+            height: 300px;
+            /* w和h属于盒子内容区域 */
+            background-color: pink;
+            border: 1px solid black;
+            padding: 20px;
+            margin: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        内容
+    </div>
+    <div>
+        内容2
+    </div>
+</body>
+</html>

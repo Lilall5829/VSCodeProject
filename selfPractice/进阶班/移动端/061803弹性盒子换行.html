@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 几个弹性盒子排在一起的宽（高）如果大于父元素了，会被强行压缩，此时如何让弹性盒子换行：flex-wrap:wrap
+    调整换行后的行对齐方式： align-content-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: center;
+            justify-content: space-between;
+            width: 500px;
+            height: 500px;
+            border: solid 1px;
+        }
+        .box div{
+            width: 100px;
+            height: 100px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>4</div>
+        <div>5</div>
+        <div>6</div>
+        <div>7</div>
+        <div>8</div>
+    </div>
+</body>
+</html>

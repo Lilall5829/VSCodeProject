@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 特点：
+        1、浮动元素会脱离标准流（脱标），在标准流中不占位置
+        2、浮动元素比标准流高半个级别，可以覆盖标准流中的元素，但无法覆盖文字
+        3、下一个浮动元素会跟在上一个浮动元素后面左右浮动，且顶端对齐
+        4、浮动元素具有行内块元素的特点
+        5、因为浮动生效，不能通过text-align:center或者margin:0 auto居中,但是可以設置margin
+        6、浮动元素不会在其浮动方向上溢出父级的包含块。也就是说元素左浮动，其左外边距不会超过父级的左内边距，元素右浮动，其右外边距不会超过父级的右内边距。但如果父级中的浮动元素的高度大于父级的高度，则该浮动元素会溢出该父级元素
+        7、浮动元素的位置受到同级同向浮动元素的影响。也就是说同一父级中有多个浮动元素，后一个元素的位置会受到前一个浮动元素位置的影响，他们不会相互遮挡，后一个浮动元素会紧挨着前一个浮动元素的左外边距进行定位，如果当前空间不足，则会换行，否则会放置在前一个浮动元素的下面
+        -->
+    <style>
+        .one{
+            margin-top: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+            float: left;
+            /* 半脱标 */
+        }
+        .two{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            /* float: left; */
+        }
+        .three{
+            width: 300px;
+            height: 300px;
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+    <div class="three">three</div>
+</body>
+</html>

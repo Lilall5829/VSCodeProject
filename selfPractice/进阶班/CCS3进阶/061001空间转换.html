@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 空间z轴：与用户视线方向相同，指向用户(屏幕外)的方向为正 -->
+    <!-- 空间转换也叫3D转换 也是 transform 
+    语法 transform:translate3d(x,y,z)
+    也可以分开写 transform:translateX/Y/Z
+    透视：Z轴移动想要有近大远小效果，应该使用perspective属性实现，写在想要实现透视盒子的父元素上,语法 perspective:值（像素单位数值，取值范围800-1200，是视距，电脑到人眼的距离）
+    -->
+    <style>
+        body{
+            perspective: 1000px;
+        }
+        .box{
+            margin: 100px auto;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            transition: all .5s;
+        }
+        .box:hover{
+            /* transform: translate3d(50px, 100px, 200px); */
+            transform: translateZ(300px);
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

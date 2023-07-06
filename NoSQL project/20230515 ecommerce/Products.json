@@ -1,0 +1,28 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "name": "Vagetable",
+      "sellerId": 1,
+      "description": "Tasty Vagetable",
+      "unitPrice": 10,
+      "inStock": 10000
+    },
+    {
+      "id": 2,
+      "name": "fruits",
+      "sellerId": 1,
+      "description": "Tasty fruits",
+      "unitPrice": 20,
+      "inStock": 5000
+    },
+    {
+      "id": 3,
+      "name": "Flowers",
+      "sellerId": 2,
+      "description": "Beautiful flowers",
+      "unitPrice": 30,
+      "inStock": 3000
+    }
+  ]
+}

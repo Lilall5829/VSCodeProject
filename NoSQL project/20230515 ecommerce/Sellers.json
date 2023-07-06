@@ -1,0 +1,16 @@
+{
+  "sellers": [
+    {
+      "id": 1,
+      "name": "Sam",
+      "address": "Toronto",
+      "phoneNumber": 2468101214
+    },
+    {
+      "id": 2,
+      "name": "Tom",
+      "address": "Toronto",
+      "phoneNumber": 1357911131
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- shift+alt+向下箭头：快速复制当前行到下一行 -->
+<!-- 实现选框后面的文字也可以被点 -->
+<body>
+    性别：
+    <input type="radio" name="gender" id="1"><label for="1">男</label>
+    <!-- 实现方法1：用label标签将内容包裹，在表单标签添加id属性，让label的for属性值=id属性值 -->
+    <label ><input type="radio" name="gender">女</label>
+    <!-- 实现方法2（更简单）：用label标签把表单和内容都包裹 -->
+</body>
+</html>

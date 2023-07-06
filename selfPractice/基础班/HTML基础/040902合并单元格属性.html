@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=table, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- 合并单元格属性（写在保留的单元格里）：rowspan 跨行合并（上下合并） colspan跨列合并（左右合并） 均保留左上角的值 注：不能跨结构标签合并，需要提前删除/注释合并后会被删除的单元格，否则会错位 -->
+<body>
+    <table border="1" width="400" height="500">
+        <caption>
+            <strong>飒飒</strong>
+        </caption>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>成绩</th>
+                <th>评语</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>雄安</td>
+                <td rowspan="2">100</td>
+                <td>评语</td>
+            </tr>
+            <tr>
+                <td>啊实打实</td>
+                <!-- <td>100</td> -->
+                <td>评语</td>
+            </tr>
+        </tbody>
+        <tfoot>
+            <tr>
+                <td colspan="2">是多少</td>
+                <!-- <td>100</td> -->
+                <td>是的是的</td>
+            </tr>
+        </tfoot>
+    </table>
+</body>
+
+</html>

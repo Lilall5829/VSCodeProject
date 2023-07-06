@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 相对视口得尺寸计算结果
+    vw:viewport width，1vw=1/100视口宽度，和rem（1/10）不一样
+    vh:viewport height，1vh=1/100视口高度 
+    计算方式和rem类似，除了不用引入flexible和媒体查询 vw/vh数值 = px单位数值/(1/100视口宽/高)-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        /* .box{
+            width: 50vw;
+            height: 30vw;
+            background-color: pink;
+        } */
+        .box{
+            width: 50vh;
+            height: 30vh;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>

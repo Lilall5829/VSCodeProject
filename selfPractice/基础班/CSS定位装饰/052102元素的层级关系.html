@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 元素的层级关系
+    1、不同布局方式元素的层级关系
+        标准流<浮动<定位
+    2、不同定位之间的层级关系
+        1）默认情况下body里写在后面的元素层级更高，会覆盖前面的元素
+        2）如果想让前面元素的层级提升，可以用z属性 z-index:整数，取值越大，显示优先级越高。默认值为0，只能用于定位布局-->
+    <style>
+        div{
+            width: 200px;
+            height: 200px;
+        }
+        .one{
+            position: absolute;
+            left: 20px;
+            top: 50px;
+            z-index: 99;
+            background-color: red;
+        }
+        .two{
+            position: absolute;
+            left: 50px;
+            top: 100px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="one">one</div>
+    <div class="two">two</div>
+</body>
+</html>

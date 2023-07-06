@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 定义id选择器：#id{css属性名：属性值} */
+        /* 通过id找到页面中带有这个id的标签设置样式，与类选择器不同的是，id选择器主要是配合JS加动态效果的；
+        所有标签上都有id属性，通过改变id属性值来改变标签的id；
+        一个标签在同一页面中只有一个id，一个id选择器只能选中一个标签
+        */
+        #blue{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <div id="blue">这是个div标签</div>
+    <div id="blue">这是个div标签</div>
+    <!-- 第二个div也可以执行，但是不符合规范，使用js时会出问题 -->
+</body>
+</html>

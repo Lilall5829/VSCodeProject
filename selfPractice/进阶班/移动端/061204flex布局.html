@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- flex/弹性布局， 
+    是一种浏览器提倡的布局模型
+    布局网页更简单、灵活
+    在父元素（不能是父元素的父元素）上添加display:flex，子元素可以撑开盒子，避免浮动脱标问题
+    不兼容低版本IE-->
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .box{
+            display: flex;
+            justify-content: space-between;
+            height: 200px;
+            border: 1px solid #000;
+        }
+        .box div{
+            /* float: left; */
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+</body>
+</html>

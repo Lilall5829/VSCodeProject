@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- backgroud-color -->
+    <style>
+        body{
+            /* text-align: center; */
+            background-color: #f5f5f5;
+            }
+        .goods{
+            width: 234px;
+            height: 300px;
+            background-color: #fff;
+            margin: 0 auto;
+            text-align: center;
+            /* text-align 只能用于文字和图居中，不能让标签体居中呀！！！标签水平居中只能用 margin: 0 auto; */
+        }
+        img{
+            width: 160px;
+            height: 160px;
+        }
+        .one{
+            font-size: 14px;
+            line-height: 25px;
+        }
+        .two{
+            font-size: 12px;
+            line-height: 30px;
+            color: #ccc;
+        }
+        .three{
+            font-size: 14px;
+            /* line-height: 30px; */
+            color: #ffa500;
+        }
+        </style>
+</head>
+<body>
+    <div class="goods">
+        <!-- div最好加类选择器，因为实际项目中非常多 -->
+        <img src="1.png" width="160px" height="160px"> 
+        <!-- <p class="one">九号车车车</p>
+        <p class="two">Toy of adult</p>
+        <p class="three">1000元</p> -->
+        <!-- 后续学习去除p标签固定段间距，才能在指定行距时使用，本例中用div比较合适 -->
+        <div class="one">九号车车车</div>
+        <div class="two">Toy of adult</div>
+        <div class="three">1000元</div>
+    </div>
+</body>
+</html>

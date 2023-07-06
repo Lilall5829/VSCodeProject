@@ -1,0 +1,18 @@
+{
+  "customers": [
+    {
+      "id": 1,
+      "name": "John",
+      "address": "Kitchener",
+      "phoneNumber": 1234567890,
+      "ordersId": 1
+    },
+    {
+      "id": 2,
+      "name": "Ammy",
+      "address": "Waterloo",
+      "phoneNumber": 9876543210,
+      "ordersId": 2
+    }
+  ]
+}

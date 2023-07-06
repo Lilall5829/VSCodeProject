@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 精灵图：将多张小图片合并成一张大图，大图片称之为精灵图
+    优点：减少服务器发送次数，减轻服务器压力，提高页面加载速度
+    步骤：1、创建一个盒子（一般用行内元素），设置盒子尺寸和小图尺寸相同 
+    2、将精灵图设置为盒子的背景图片
+    3、修改背景图位置 取负值(图要往左往上取负值)给盒子的background-position:x y -->
+    <style>
+        span{
+            display: inline-block;
+            width: 18px;
+            height: 24px;
+            /* background-color: pink; */
+            background-image: url(./images/taobao.png);
+            background-position:-3px 0;
+        }
+        b{
+            display: block;
+            width: 22px;
+            height: 24px;
+            /* background-color: pink; */
+            background-image: url(./images/taobao.png);
+            background-position:-1px -90px;
+        }
+    </style>
+</head>
+<body>
+    <span></span>
+    <b></b>
+</body>
+</html>

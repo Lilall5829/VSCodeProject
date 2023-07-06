@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      th,
+      td {
+        padding: 10px;
+        border: 1.5px solid black;
+        border-collapse: collapse;
+      }
+      p {
+        line-height: 1;
+      }
+      .first {
+        background-color: lightgray;
+      }
+      .busy {
+        text-align: left;
+        line-height: 2;
+        font-size: medium;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <table style="width: 50%">
+      <tr class="first">
+        <th></th>
+        <th>Sunday september 11</th>
+        <th>Monday september 12</th>
+        <th>Tuesday september 13</th>
+        <th>Wednesday september 14</th>
+        <th>Thursday september 15</th>
+        <th>Friday september 16</th>
+      </tr>
+      <tr>
+        <th class="first">7</th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th class="first">8</th>
+        <th></th>
+        <th></th>
+        <th class="busy" rowspan="2">
+          INFO1580-1 <br />
+          <p>Systems Development:concepts</p>
+          Theory 1 <br />DO-DMB-1D02 <br />John Mckay
+        </th>
+        <th></th>
+        <th></th>
+        <th></th>
+      </tr>
+      <tr>
+        <th class="first">9</th>
+        <th></th>
+        <th class="busy" rowspan="3">
+          INFO1570-1
+          <p>Technology Infrastucture:Fundamentals</p>
+          Lab1 <br />
+          DO-DMB-3E02 <br />
+          John Innanen
+        </th>
+        <th></th>
+        <th></th>
+        <th rowspan="4"></th>
+      </tr>
+      <tr>
+        <th class="first">10</th>
+        <th></th>
+        <th></th>
+        <th class="busy" rowspan="2">
+          INFO1580-1 <br />
+          <p>System Development:concepts</p>
+          Lab 1 <br />
+          DO-DMB-1D02 <br />
+          John Mckay
+        </th>
+        <th></th>
+      </tr>
+      <tr>
+        <th class="first">11</th>
+        <th></th>
+        <th class="busy" rowspan="2">
+          INFO1580-1 <br />
+          <p>Programming:Fundamentals</p>
+          Lab1 <br />
+          DO-DMB-1D308 <br />
+          Elizabeth Stacey
+        </th>
+        <th></th>
+      </tr>
+      <tr>
+        <th class="first">12</th>
+        <th></th>
+        <th></th>
+        <th class="busy">
+          COMM1180-2 <br />
+          <p>Elective Technical Communications 1</p>
+          Theory 1 <br />
+          DO-DMB-2E35
+        </th>
+        <th class="busy">
+          COMM1180-2 <br />
+          <p>Elective Technical Communications 1</p>
+          Theory 1 <br />
+          DO-DMB-2E35
+        </th>
+      </tr>
+    </table>
+  </body>
+</html>

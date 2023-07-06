@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 让某元素本身在屏幕中不可见。如：鼠标hover之后元素隐藏
+    常见属性：visibility:hidden(不常用，因为隐藏了还占位)
+    display:none(常用)
+    -->
+    <style>
+        .one{
+            position: absolute;
+            top: 300px;
+            display: none;
+            background-color: pink;
+            width: 100px;
+            height: 100px;
+            /* visibility: hidden; */
+        }
+        .two{
+            position: relative;
+            background-color: blue;
+            width: 200px;
+            height: 200px;
+        }
+        .two:hover .one{
+            display: block;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="two">asasdasd
+        <div class="one">one</div>
+    </div>
+    
+</body>
+</html>

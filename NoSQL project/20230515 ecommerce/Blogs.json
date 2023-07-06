@@ -1,0 +1,25 @@
+{
+  "blogs": [
+    {
+      "id": 1,
+      "userId": 1,
+      "content": "blog content",
+      "createTime": 20230530,
+      "views": 1000
+    },
+    {
+      "id": 2,
+      "userId": 1,
+      "content": "blog content",
+      "createTime": 20230531,
+      "views": 500
+    },
+    {
+      "id": 3,
+      "userId": 2,
+      "content": "blog content",
+      "createTime": 20230601,
+      "views": 100
+    }
+  ]
+}
