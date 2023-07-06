@@ -1,5 +1,4 @@
-<script>
-  function greet(uName){document.write(`<h2>Hello ${uName}!<br/>How are you?</h2>`);
-   return }; greet('Bob');alert(uName);
-</script>
-
+alert("Hello user!");
+console.log(document.getElementById("main"));
+document.getElementById("main").style.fontSize = "large";
+document.getElementById("main").style.color = "lightgrey";
