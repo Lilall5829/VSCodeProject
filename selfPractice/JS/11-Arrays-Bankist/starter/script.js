@@ -64,7 +64,6 @@ const inputClosePin = document.querySelector('.form__input--pin');
 const displayMovements = function (movements) {
   //将该标签containerMovements内的标签清空,也可以用log显示该标签看看里面都是什么登西
   containerMovements.innerHTML = '';
-
   movements.forEach(function (mov, i) {
     const type = mov > 0 ? 'deposit' : 'withdrawal';
     //修改html标签

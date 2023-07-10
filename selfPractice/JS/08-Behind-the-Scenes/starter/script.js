@@ -40,7 +40,7 @@ const calcAge3 = birthYear => {
 };
 calcAge3(1991);
 //object 为 function的owner, this值指向调用fuction的object
-/* const jonas1 = {
+/* const jonas1 = { 
   year: 1991,
   calcAge: function () {
     console.log(this);
