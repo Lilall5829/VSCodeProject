@@ -2,7 +2,121 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #05445e;
 }
-/* .navbar {
-  --bs-navbar-padding-x: 0 30px;
-} */
+p {
+  text-indent: 2em;
+}
+h2,
+h4,
+h6 {
+  font-family: sans-serif;
+  font-weight: 800;
+}
+h4 {
+  line-height: 1.5;
+  margin: 2rem 0;
+  border-bottom: #05445e solid;
+}
+h6 {
+  margin: 1rem 0;
+}
+
+nav a {
+  color: #05445e;
+}
+nav button:hover path {
+  color: #fff;
+}
+.info {
+  position: relative;
+  padding: 30px 20px;
+  text-align: center;
+  background-image: url(https://github.blog/wp-content/uploads/2020/12/wallpaper_footer_4KUHD_16_9.png);
+  background-position: left 0 top -1050px;
+  background-size: cover;
+  border: #05445e solid 2px;
+}
+.info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 0;
+}
+
+.info .col-sm-6 {
+  position: relative;
+}
+
+.info img {
+  width: 30%;
+}
+.info h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.info p {
+  padding: 100px 0;
+  text-align: center;
+  line-height: 2;
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.info a {
+  text-decoration: none;
+  color: #05445e;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+main {
+  padding: 0 2rem 2rem 2rem;
+  background: linear-gradient(white, #d4f1f4);
+}
+
+.introduction {
+  padding: 3rem 2rem;
+}
+
+aside {
+  padding: 0 2rem 2rem 2rem;
+  background-color: #05445e;
+}
+aside h4 {
+  border-bottom: #fff solid;
+}
+.skills h4 {
+  color: #fff;
+}
+.skills li {
+  color: #fff;
+}
+.ava {
+  color: #fff;
+}
+table,
+tbody,
+th,
+td {
+  border: #fff solid 2px;
+  font-size: small;
+  color: #fff;
+}
+
+footer {
+  padding: 0 2rem 2rem 2rem;
+  background-color: #000;
+  height: 5rem;
+  text-align: center;
+  line-height: 5;
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
