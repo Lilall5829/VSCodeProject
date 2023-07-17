@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="post">
+      <input type="text" name="form" value="asdasd" maxlength="8" />
+
+      <!-- radio buttons or checkboxs have same name will work together-->
+      <input
+        type="radio"
+        name="radio"
+        id="radioButton1"
+        value="This is a radio button"
+      />
+      <input
+        type="radio"
+        name="radio"
+        id="radioButton2"
+        value="This is a radio button"
+      />
+      <select size="2" name="cityname" id="" multiple>
+        <option value="option1">Kitchener</option>
+        <option value="option2" selected>Waterloo</option>
+        <option value="option3">Cambridge</option>
+      </select>
+      value1
+      <input type="checkbox" name="checkbox1" value="checkbox buttom1" />
+      <input type="checkbox" name="checkbox1" value="checkbox buttom2" />
+      <input type="checkbox" name="checkbox1" value="checkbox buttom3" />
+      <input type="hidden" name="hidden" value="hidden" />
+      <label><input type="radio" name="gender" />女</label>
+      <label><input type="radio" name="gender" />♂</label>
+      <input type="password" name="password" />
+      <input type="submit" name="submit" value="Submit Button" />
+      <input type="reset" name="reset" value="Reset Button" />
+    </form>
+    <textarea name="" id="" cols="30" rows="10"> </textarea>
+  </body>
+</html>
