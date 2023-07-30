@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <style>
+      p {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="hide_me">hide me</div>
+    <main>
+      <section>
+        <h2>what is 2 + 8?</h2>
+        <button id="show1">Check answer</button>
+        <p id="answer1">10</p>
+      </section>
+      <section>
+        <h2>what is the capital of Canada?</h2>
+        <button id="show2">Check answer</button>
+        <p id="answer2">Ottawa</p>
+      </section>
+      <section>
+        <h2>what area we learning?</h2>
+        <button id="show3">Check answer</button>
+        <p id="answer3">jquery</p>
+      </section>
+    </main>
+    <script>
+      $("#hide_me").hide();
+      //   $(document).ready(function () {
+      $("#show1").click(function () {
+        // $("#answer1").show();
+        $("#answer1").toggle();
+      });
+      $("#show2").click(function () {
+        $("#answer2").show();
+      });
+      $("#show3").click(function () {
+        $("#answer3").show();
+      });
+      //   });
+    </script>
+  </body>
+</html>

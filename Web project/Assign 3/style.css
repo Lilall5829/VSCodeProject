@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  text-decoration: none;
+  color: #05445e;
+}
+
+.row {
+  margin: 0 20px !important;
+}
+h2,
+h4,
+h6 {
+  font-family: sans-serif;
+  font-weight: 800;
+}
+h4 {
+  line-height: 1.5;
+  border-bottom: #05445e solid;
+}
+h6 {
+  margin: 1rem 0;
+}
+
+nav {
+  margin: 0 30px;
+}
+nav a {
+  color: #05445e;
+}
+nav button:hover path {
+  color: #fff;
+}
+.info {
+  position: relative;
+  padding: 30px 20px;
+  text-align: center;
+  background-image: url(https://github.blog/wp-content/uploads/2020/12/wallpaper_footer_4KUHD_16_9.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border: #05445e solid 2px;
+}
+.info::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 0;
+}
+
+.info .col-sm-6 {
+  position: relative;
+}
+
+.info .profile {
+  width: 50%;
+}
+.info h2 {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.info .text {
+  margin: 5rem 0;
+}
+.info p {
+  text-align: center;
+  line-height: 2;
+  font-weight: 700;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.info a {
+  text-decoration: none;
+  line-height: 2;
+  font-weight: 700;
+  color: #05445e;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+main {
+  padding: 0 2rem 2rem 2rem;
+  background: linear-gradient(white, #d4f1f4);
+}
+.aboutMe,
+.aboutCN,
+.education,
+.workExp {
+  margin: 0.5rem 2rem;
+}
+.introduction {
+  padding: 3rem 2rem;
+}
+
+aside {
+  padding: 0 2rem 2rem 2rem;
+  background-color: #05445e;
+}
+aside h4 {
+  border-bottom: #fff solid;
+}
+.skills {
+  margin: 0.5rem 2rem;
+}
+.skills h4 {
+  color: #fff;
+}
+.skills li {
+  color: #fff;
+}
+.ava {
+  margin: 0.5rem 2rem;
+  color: #fff;
+}
+table,
+tbody,
+tr,
+td {
+  border: 2px #fff solid !important;
+  font-size: small;
+  color: #fff;
+}
+
+footer {
+  margin: 0 20px;
+  padding: 0 2rem 2rem 2rem;
+  background-color: #000;
+  height: 5rem;
+  text-align: center;
+  line-height: 5;
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}

@@ -1,0 +1,84 @@
+{
+  "name": "LI LA",
+  "stuNumber": "8906736",
+  "contactInformation": {
+    "email": "Lli6736@conestogac.on.ca",
+    "phone": "2268686625",
+    "github": "https://github.com/Lilall5829"
+  },
+  "aboutMe": "My name is lila and I come from China. Now I'm a full-time student at Conestoga College in the Reporting Systems and Database program. I graduated from University of Science and Technology of China with the bachelor degree in Computer Science and Technology, and from Shanghai Jiao Tong University with master degree in Law. During my postgraduate study, I obtained Chinese Legal Professional Qualification Certificate. To better practice myself, I worked as an intern in Shanghai Pudong New District Court, Hiways Law Firm and Legal Department of Tencent Technology (Shenzhen) Company Limited. Since my graduation in 2021, I have been working as a legal counsel in Tencent, with main responsibility to review technology import and export research projects and contracts, rovide interpretation of U.S. export control laws and policies, create technology control plans, and provide guidance and training to staff as needed. Besides, I am involved in developing, testing and maintaining Tencent's technology import and export compliance database and system.",
+  "china": "China is a captivating nation located in East Asia with a rich history and vibrant culture. It blends ancient traditions with modern advancements and boasts stunning landmarks like the Great Wall and the Terracotta Army. China's rapid economic growth has made it a global powerhouse, while its cities showcase futuristic architecture and bustling markets. The country's cuisine, diverse landscapes, and artistic traditions, along with its technological innovations, make it an enticing destination that offers a wealth of experiences and a fascinating window into its ancient heritage and contemporary achievements.",
+  "education": [
+    {
+      "degree": "Graduate Certificate in Report System and Database Development",
+      "university": "Conestoga College • Kitchener, Ontario",
+      "year": "May 2023 - Dec 2023",
+      "courses": "Core Modules: NoSQL and Relational Databases, Data Warehouse Implementation, Java Programming, Web Technologies,Information Technology Project Management"
+    },
+    {
+      "degree": "Master Degree in Juris",
+      "university": "Shanghai Jiao Tong University • Shanghai, China",
+      "year": "Sep 2018 - Jun 2021",
+      "courses": "Core Modules: Civil Law, Contract Law, Patent Law,Copyright Law, Trademark Law, Property Law, Criminal Law,Competition Law, Legal professional quality development"
+    },
+    {
+      "degree": "Bachelor Degree in Computer Science and Technology",
+      "university": "University of Science and Technology of China • Hefei, China",
+      "year": "Sep 2014 - Jul 2018",
+      "courses": "Core Modules: Advanced Mathematics, Program Design, Data Structures, Algorithms, Computer Organization, Principles and Techniques of Compiler, Operating System, Computer Networks, Software Engineering"
+    }
+  ],
+  "workExp": [
+    {
+      "title": "Legal Counsel",
+      "company": "Tencent technology (Shenzhen) Company Limited • Shenzhen, China",
+      "duration": "Jul 2021 - Mar 2023",
+      "responsibilities": "Draw up and review legal documents such as technology import and export contracts and compliance projects."
+    },
+    {
+      "title": "Research assistant",
+      "company": "National High Performance Computing Center (Hefei) • Hefei, China",
+      "duration": "Mar 2018 - Jun 2018",
+      "responsibilities": "Participated in the Design and implementation of Virtual AP in Wireless software-defined Network” research project, mainly responsible for English literature translation, sorting, experimental platform building, performance testing, and writing practical reports."
+    },
+    {
+      "title": "Research assistant",
+      "company": "Network and System Security Laboratory of USTC • Hefei, China",
+      "duration": "May 2016 - Sep 2016",
+      "responsibilities": "Participated in the research project “Research, Testing, and Improvement of Distributed Message System Kafka Mechanism” mainly responsible for translating and sorting English literature on this topic and summarizing domestic research status, writing research reports and documents."
+    }
+  ],
+  "techSkills": [
+    "Proficiency in data structures and algorithms for efficient coding and optimization.",
+    "Familiarity with Java programming and software development.",
+    "Familiarity with NoSQL and SQL database development.",
+    "Have practical experience in web development technologies, including HTML, CSS, JavaScript, and frameworks/libraries such as React and Vue."
+  ],
+  "availabilities": [
+    { "date": "Sunday", "availability": "All Day & Night Available" },
+    {
+      "date": "Monday",
+      "availability": "Available for 6AM : 1PM, All Night Available"
+    },
+    {
+      "date": "Tuesday",
+      "availability": "Available for 6AM : 2PM, All Night Available"
+    },
+    {
+      "date": "Wednesday",
+      "availability": "Available for 6AM : 2PM, All Night Available"
+    },
+    {
+      "date": "Thursday",
+      "availability": "All Night Available"
+    },
+    {
+      "date": "Friday",
+      "availability": "All Day & Night Available"
+    },
+    {
+      "date": "Saturday",
+      "availability": "All Day & Night Available"
+    }
+  ]
+}
