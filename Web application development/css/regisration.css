@@ -1,0 +1,43 @@
+.reg {
+  color: black;
+  font-family: "Times New Roman", Times, serif;
+}
+form {
+  margin: 0 auto;
+  padding: 10px;
+  width: 510px;
+  border: solid gray 2px;
+}
+form label {
+  display: inline-block;
+  margin: 10px;
+  width: 250px;
+  text-align: right;
+}
+.country {
+  padding-left: 18px;
+  text-align: left;
+}
+.gender {
+  padding-left: 47px;
+  text-align: left;
+}
+.about {
+  line-height: 2;
+  text-align: left;
+}
+.submit {
+  /* padding-left: 47px; */
+  text-align: center;
+}
+p {
+  display: inline-block;
+  color: red;
+}
+input:invalid {
+  border: 2px solid grey;
+}
+
+input:valid {
+  border: 2px solid black;
+}

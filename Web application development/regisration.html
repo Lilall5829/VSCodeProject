@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regisration</title>
+    <script src="/script/regisration.js"></script>
+    <link rel="stylesheet" href="/css/regisration.css" />
+  </head>
+  <body>
+    <!-- form -->
+    <form action="">
+      <h1 class="reg">Registration Form</h1>
+      <!-- input userId -->
+      <label for="userId"
+        >User id:
+        <input
+          type="text"
+          id="userId"
+          placeholder="Enter Username(length 5-12)"
+        />
+      </label>
+      <p></p>
+      <!-- input password -->
+      <label for="password"
+        >Password:
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter Password(length 7-12)"
+        />
+      </label>
+      <p></p>
+      <!-- input name -->
+      <label for="name"
+        >Name:
+        <input type="text" id="name" placeholder="Alphabates only" />
+      </label>
+      <p></p>
+      <!-- input address -->
+      <label for="address"
+        >Address:
+        <input type="text" id="address" placeholder="Enter address" />
+      </label>
+      <!-- select country -->
+      <label for="country" class="country"
+        >Country:
+        <select name="countries" id="country">
+          <option value="Canada">Canada</option>
+          <option value="China">China</option>
+          <option value="India">India</option>
+          <option value="Nigeria">Nigeria</option>
+        </select>
+      </label>
+      <p></p>
+      <!-- input zip code -->
+      <label for="zipCode"
+        >ZIP Code:
+        <input
+          type="text"
+          id="zipCode"
+          placeholder="Numeric only(length 5-6)"
+        />
+      </label>
+      <p></p>
+      <!-- input email -->
+      <label for="email"
+        >Email:
+        <input type="email" id="email" placeholder="Enter email" />
+      </label>
+      <p></p>
+      <!-- select gender -->
+      <label for="gender" class="gender"
+        >Sex:
+        <input type="radio" id="gender1" name="gender" value="male" checked />
+        male
+        <input type="radio" id="gender2" name="gender" value="female" />female
+      </label>
+      <!-- select language -->
+      <label for="lang"
+        >Language: <input type="checkbox" name="lang" id="lang1" />English
+        <input type="checkbox" name="lang" id="lang2" />Non English
+      </label>
+      <p></p>
+      <!-- input about -->
+      <label for="about" class="about"
+        >About:
+        <textarea name="about" id="about" cols="45" rows="15"></textarea>
+      </label>
+
+      <label for="submit" class="submit">
+        <input
+          type="button"
+          onclick="validateForm()"
+          id="submit"
+          name="submit"
+          value="Submit"
+        />
+      </label>
+    </form>
+  </body>
+</html>

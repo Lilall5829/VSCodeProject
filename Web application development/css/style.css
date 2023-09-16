@@ -1,0 +1,42 @@
+* {
+  margin: 0 auto;
+}
+nav {
+  display: flex;
+  padding: 0 100px;
+}
+nav div {
+  padding: 0 10px;
+}
+.img1 {
+  padding-right: 100px;
+}
+.img2 img {
+  padding-left: 100px;
+  width: 50px;
+}
+nav div a {
+  color: #0bd1c4;
+}
+nav div a:hover {
+  color: blueviolet;
+}
+main {
+  padding: 100px;
+}
+h1,
+h2,
+p {
+  margin-bottom: 20px;
+}
+h1,
+.chapter1 {
+  color: rgba(61, 3, 3, 0.853);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+h2,
+.intro {
+  color: blue;
+  font-style: italic;
+  font-family: Arial, Helvetica, sans-serif;
+}

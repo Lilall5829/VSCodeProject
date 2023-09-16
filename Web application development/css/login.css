@@ -1,0 +1,9 @@
+p {
+  margin: 18px;
+  display: inline-block;
+  color: red;
+}
+.submit {
+  margin: 18px;
+  display: block;
+}
