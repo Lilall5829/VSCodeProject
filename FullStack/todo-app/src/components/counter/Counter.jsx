@@ -1,9 +1,11 @@
 // Import state
 import { useState } from "react";
-//Import PropTypes
-import {PropTypes} from "prop-types";
+
 // Add CSS style
 import "./Counter.css";
+// Do not add parentheses to CounterButton! Only non-default component need it!
+import CounterButton from "./CounterButton";
+import ResetButton from "./ResetButton";
 
 export default function Counter() {
     const [count, setCount] = useState(0);
@@ -14,6 +16,9 @@ export default function Counter() {
     function decrementCounterParentFunction(by){
         setCount(count - by)//Equals to state[1](state[0] + 1)
     }
+    function resetCounter(){
+        setCount(0);
+    }
     
 
     return( 
@@ -23,56 +28,8 @@ export default function Counter() {
         <CounterButton by={1} incrementMethod={incrementCounterParentFunction} decrementMethod={decrementCounterParentFunction}/>
         <CounterButton by={2} incrementMethod={incrementCounterParentFunction} decrementMethod={decrementCounterParentFunction}/>
         <CounterButton by={3} incrementMethod={incrementCounterParentFunction} decrementMethod={decrementCounterParentFunction}/>
+        <ResetButton resetMethod = {resetCounter}></ResetButton>
     </>
     )
 }
 
-// Invoke properties
-// Call parent componet method, notice: when you pass properties as parameters, they should be included in {}!!!
-function CounterButton({by,incrementMethod,decrementMethod}){
-    //Introduce "state", it will return an array including state[0](value) and state[1](function)
-    //Initialize state[0] by 0
-    // const state = useState(0);
-    // Deconstruct array state to count and setCount
-    const [count, setCount] = useState(0);
-
-    console.log(by);
-
-    function incrementCounterFunction(){
-        // Child component +
-        setCount(count + by)
-        // Parent component +
-        incrementMethod(by);
-    }
-    function decrementCounterFunction(){
-        setCount(count - by)
-        decrementMethod(by);
-    }
-
-    return(
-        <div className="Counter">
-            {/* <span className="count">{count}</span> */}
-            {/* map a function by {function name} to "onClick"*/}
-            <div>            
-                <button className="counterButton" onClick={incrementCounterFunction}
-                >+{by}</button>
-            </div>
-
-            <div>            
-                <button className="counterButton" onClick={decrementCounterFunction}
-                >-{by}</button>
-            </div>
-        </div>
-    )
-}
-
-// Set property type for function
-CounterButton.propTypes = {
-    // Only number be allowed to assign to "by"
-    by: PropTypes.number
-}
-// Set default property type for function
-CounterButton.defaultProps = {
-    // Only number be allowed to assign to "by"
-    by: 5
-}

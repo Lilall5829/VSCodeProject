@@ -1,6 +1,7 @@
 import "./App.css";
 //import components from other files
-import Counter from "./components/counter/Counter";
+// import Counter from "./components/counter/Counter";
+import TodoApp from "./components/todo/TodoApp";
 
 // import LearnComponents from "./components/examples/LearnComponents";
 // App is the parent component of all other components. So don't forget to add child components into it!!!
@@ -17,7 +18,8 @@ function App() {
         property2="value2"
       ></PlayingWithProps> */}
       {/* If you want to pass a number, it must be included by{}! */}
-      <Counter></Counter>
+      {/* <Counter></Counter> */}
+      <TodoApp></TodoApp>
     </div>
   );
 }
