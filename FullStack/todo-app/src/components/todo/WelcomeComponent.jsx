@@ -1,20 +1,26 @@
 import { useParams, Link } from "react-router-dom";
-import axios from "axios";
+import { useState } from "react";
+import { retrieveHelloWorldBean } from "./api/HelloWorldApiService";
 export default function WelcomeComponent() {
   // Get the username from URL
   const { username } = useParams();
 
+  const [message, setMessage] = useState(null);
+
   function callHelloWorldRestApi() {
-    // How to call the rest apis in React: axios
-    axios
-      .get("http://localhost:8080/hello-world")
+    // Haed code the username here
+    retrieveHelloWorldBean("lila")
       .then((response) => successfulResponse(response))
       .catch((error) => errorResponse(error))
-      .finally(() => console.log("cleanup")); // "then" means when rest API called successful, then do it
+      .finally(() => console.log("cleanup"));
+    // "then" means when rest API called successful, then do it
   }
 
   function successfulResponse(response) {
     console.log(response);
+    // Getting call back from 8000 and show data("Hello world") in the tags
+    // setMessage(response.data);
+    setMessage(response.data.message);
   }
 
   function errorResponse(error) {
@@ -34,6 +40,7 @@ export default function WelcomeComponent() {
           Call hello world
         </button>
       </div>
+      <div className="text-info">{message}</div>
     </div>
   );
 }
