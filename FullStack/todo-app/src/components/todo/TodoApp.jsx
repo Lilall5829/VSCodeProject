@@ -1,89 +1,69 @@
-import { useState } from "react"
-import "./TodoApp.css"
-export default function TodoApp(){
-    return (
-        <div className="TodoApp">
-            Todo Management Application
-            <LoginComponent></LoginComponent>
-            <WelcomeComponent></WelcomeComponent>
-        </div>
-    )
-    function LoginComponent(){
+import { useState } from "react";
+// Install browser router: npm install react-router-dom
+// Import 6 properties
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+import WelcomeComponent from "./WelcomeComponent";
+import LoginComponent from "./LoginComponent";
+import LogoutComponent from "./LogoutComponent";
+import HeaderComponent from "./HeaderComponent";
+import FooterComponent from "./FooterComponent";
+import ListTodosComponent from "./ListTodosComponent";
+import ErrorComponent from "./ErrorComponent";
+import AuthProvider, { useAuth } from "./security/AuthContext";
 
-        const[username, setUsername] = useState('lila')
-        const[password, setPassword] = useState('')
-        const[showSuccessMessage, setShowSuccessMessage] = useState(false)
-        const[showErrorMessage, setShowErrorMessage] = useState(false)
+import "./TodoApp.css";
+// Check only when you log in successfully you can be taken to the specific route like /todos, or you will be taken to log in page
+function AuthenticatedRoute({ children }) {
+  const authContext = useAuth();
+  if (authContext.isAuthenticated) return children;
+  return <Navigate to="/"></Navigate>;
+}
 
-        function handleUsernameChange(event){
-            setUsername(event.target.value)
-        }
+export default function TodoApp() {
+  return (
+    <div className="TodoApp">
+      {/* Wrap all componets into AutherProvider */}
+      <AuthProvider>
+        <BrowserRouter>
+          {/* If you want to use Link tags, you should put the component which includes Link tag into BrowserRouter tags! */}
+          <HeaderComponent></HeaderComponent>
 
-        function handlePasswordChange(event){
-            setPassword(event.target.value)
-        }
-        function handleSubmit(){
-            // add a hard code authentication
-            if(username === 'lila' && password === '123'){
-                console.log('Success');
-                setShowSuccessMessage(true)
-                setShowErrorMessage(false)
-            } else{
-                console.log('Failed');
-                setShowSuccessMessage(false)
-                setShowErrorMessage(true)
-            }
-        }
-        // Use short-circuit to simplify the following code
-        // function SuccessMessageComponet(){
-        //     if(showSuccessMessage)
-        //     return(
-        //         <div className="successMessage">Authenticated Successfully</div>
-        //     )
-        //     return null
-        // }
-        // function ErrorMessageComponet(){
-        //     if(showErrorMessage)
-        //     return(
-        //         <div className="errorMessage">Authentication Failed. Please check your creadenials.</div>
-        //         )
-        //     return null
-        // }
-
-        return (
-            <div className="Login">
-                <div className="LoginForm">
-                    {/* Short-circuit   */}
-                    {showSuccessMessage && <div className="successMessage">Authenticated Successfully</div>}
-                    {showErrorMessage && <div className="errorMessage">Authentication Failed. Please check your creadenials.</div>}
-                    {/* <SuccessMessageComponet></SuccessMessageComponet> */}
-                    {/* <ErrorMessageComponet></ErrorMessageComponet> */}
-                    <div>
-                        <label htmlFor="">Username</label>
-                        {/* Use value to authenticate user and password and call onChange */}
-                        {/* When you pass value, you must also pass an onChange handler that updates the passed value. */}
-                        <input type="text" name="username" value={username} onChange={handleUsernameChange}></input>
-                    </div>
-                    <div>
-                        <label htmlFor="">Password</label>
-                        <input type="password" name="password" value={password} onChange={handlePasswordChange}></input>
-                    </div>
-                    <div>
-                        <button type="button" name="login" onClick={handleSubmit}>Login</button>
-                    </div>
-                </div>
-                Login Component 
-            </div>
-        )
-    }
-
-
-
-    function WelcomeComponent(){
-        return (
-            <div className="Welcome">
-                Welcome Component 
-            </div>
-        )
-    }
+          <Routes>
+            {/* These routes like @Getmapping in Spring */}
+            <Route
+              path="/"
+              element={<LoginComponent></LoginComponent>}
+            ></Route>{" "}
+            {/* Show login component when open localhost:3000 */}
+            <Route
+              path="/login"
+              element={<LoginComponent></LoginComponent>}
+            ></Route>
+            <Route
+              path="/welcome/:username"
+              element={
+                <AuthenticatedRoute>
+                  <WelcomeComponent></WelcomeComponent>
+                </AuthenticatedRoute>
+              } // Put the component which need to be authenticated into AuthenticatedRoute
+            ></Route>
+            <Route
+              path="/todos"
+              element={
+                <AuthenticatedRoute>
+                  <ListTodosComponent></ListTodosComponent>
+                </AuthenticatedRoute>
+              }
+            ></Route>
+            <Route path="*" element={<ErrorComponent></ErrorComponent>}></Route>
+            <Route
+              path="/logout"
+              element={<LogoutComponent></LogoutComponent>}
+            ></Route>
+          </Routes>
+          <FooterComponent></FooterComponent>
+        </BrowserRouter>
+      </AuthProvider>
+    </div>
+  );
 }
