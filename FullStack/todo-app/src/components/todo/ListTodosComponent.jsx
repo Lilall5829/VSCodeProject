@@ -1,31 +1,31 @@
+import { useEffect, useState } from "react";
+import {
+  retrieveAllTodosForUsernameApi,
+  deleteTodoApi,
+} from "./api/TodoApiService";
 // Create todo list!
-export default function ListTodosComponent() {
-  const today = new Date();
-  const targetDate = new Date(
-    today.getFullYear() + 2,
-    today.getMonth(),
-    today.getDay()
-  );
-  const todos = [
-    {
-      id: 1,
-      description: "learn React",
-      done: false,
-      targetDate: targetDate,
-    },
-    {
-      id: 2,
-      description: "learn AWS",
-      done: false,
-      targetDate: targetDate,
-    },
-    {
-      id: 3,
-      description: "learn Java Spring",
-      done: false,
-      targetDate: targetDate,
-    },
-  ];
+function ListTodosComponent() {
+  const [todos, setTodos] = useState([]); // Don't forget the [] inside (), or there will be an error!
+  const [message, setMessage] = useState(null);
+  useEffect(() => refreshTodos(), []);
+  function refreshTodos() {
+    retrieveAllTodosForUsernameApi("in28minutes");
+  }
+
+  function deleteTodo(id) {
+    console.log("clicked " + id);
+    deleteTodoApi("lila", id)
+      .then(
+        () => {
+          setMessage(`Delete of todo with id = ${id} successful`);
+          refreshTodos();
+        }
+        //1: Display message
+        //2: Update Todos list
+      )
+      .catch((error) => console.log(error));
+  }
+
   return (
     // Set class name to container for using bootstrap
     <div className="container">
@@ -34,10 +34,10 @@ export default function ListTodosComponent() {
         <table className="table">
           <thead>
             <tr>
-              <td>Id</td>
-              <td>Description</td>
-              <td>Status</td>
-              <td>Target Date</td>
+              <th>Description</th>
+              <th>Status</th>
+              <th>Target Date</th>
+              <th>Delete</th>
             </tr>
           </thead>
           <tbody>
@@ -51,12 +51,19 @@ export default function ListTodosComponent() {
                 {/* You can not use todo.done/target. It must be converted to string type. Don't forget the () after them! */}
                 <td>{todo.done.toString()}</td>
 
-                <td>{todo.targetDate.toDateString()}</td>
+                <td>{todo.targetDate.toString()}</td>
+                <td>
+                  <button className="btn btn-warning" onClick={deleteTodo}>
+                    Delete
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
         </table>
+        {message && <div className="alert alert-warning">{message}</div>}
       </div>
     </div>
   );
 }
+export default ListTodosComponent;

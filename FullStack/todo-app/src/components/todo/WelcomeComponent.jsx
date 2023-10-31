@@ -7,14 +7,14 @@ export default function WelcomeComponent() {
 
   const [message, setMessage] = useState(null);
 
-  function callHelloWorldRestApi() {
-    // Haed code the username here
-    retrieveHelloWorldBean("lila")
-      .then((response) => successfulResponse(response))
-      .catch((error) => errorResponse(error))
-      .finally(() => console.log("cleanup"));
-    // "then" means when rest API called successful, then do it
-  }
+  // function callHelloWorldRestApi() {
+  //   // Haed code the username here
+  //   retrieveHelloWorldBean("lila")
+  //     .then((response) => successfulResponse(response))
+  //     .catch((error) => errorResponse(error))
+  //     .finally(() => console.log("cleanup"));
+  //   // "then" means when rest API called successful, then do it
+  // }
 
   function successfulResponse(response) {
     console.log(response);
@@ -35,11 +35,11 @@ export default function WelcomeComponent() {
         {/* Link tag helps your app render components that need re-rendering based on a specified route rather than refreshing the whole page like anchor tag! */}
         Manage your todos. <Link to="/todos">Start here</Link>
       </div>
-      <div>
+      {/* <div>
         <button className="btn btn-success m-5" onClick={callHelloWorldRestApi}>
           Call hello world
         </button>
-      </div>
+      </div> */}
       <div className="text-info">{message}</div>
     </div>
   );
