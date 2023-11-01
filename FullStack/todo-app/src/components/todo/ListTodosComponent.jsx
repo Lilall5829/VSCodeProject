@@ -28,7 +28,6 @@ function ListTodosComponent() {
   function refreshTodos() {
     retrieveAllTodosForUsernameApi(username)
       .then((response) => {
-        console.log(response);
         setTodos(response.data);
       })
       .catch((error) => console.log(error));
@@ -48,8 +47,10 @@ function ListTodosComponent() {
   function updateTodo(id) {
     console.log("click" + id);
     navigate(`/todo/${id}`);
+  }
 
-    // updateTodoApi;
+  function addNewTodo() {
+    navigate(`/todo/-1`);
   }
 
   return (
@@ -100,7 +101,9 @@ function ListTodosComponent() {
             ))}
           </tbody>
         </table>
-        {/* {message && <div className="alert alert-warning">{message}</div>} */}
+      </div>
+      <div className="btn btn-success m-4" onClick={addNewTodo}>
+        Add New Todo
       </div>
     </div>
   );

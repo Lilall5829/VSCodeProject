@@ -56,7 +56,7 @@ export default function TodoApp() {
                 </AuthenticatedRoute>
               }
             ></Route>
-            The following route is for update or new todos
+            {/* The following route is for update or new todos */}
             <Route
               path="/todo/:id"
               element={

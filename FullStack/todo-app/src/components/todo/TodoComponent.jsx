@@ -1,9 +1,14 @@
 // This component is for update or add new todos
-import { useParams } from "react-router-dom";
-import { updateTodoApi } from "./api/TodoApiService";
+import { useNavigate, useParams } from "react-router-dom";
+import {
+  addTodoApi,
+  retrieveTodoApi,
+  updateTodoApi,
+} from "./api/TodoApiService";
 import { useAuth } from "./security/AuthContext";
 import { useEffect, useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import moment from "moment";
 export default function TodoComponent() {
   const [description, setDescription] = useState("");
   const [targetDate, setargetDate] = useState("");
@@ -11,20 +16,49 @@ export default function TodoComponent() {
   const { id } = useParams();
   const authContext = useAuth();
   const username = authContext.username;
+  const navigate = useNavigate();
 
-  useEffect(() => updateTodos(), [id]);
-
-  function updateTodos() {
-    updateTodoApi(username, id)
-      .then((response) => {
-        setDescription(response.data.description);
-        setargetDate(response.data.targetDate);
-      })
-      .catch((error) => console.log(error));
+  useEffect(() => retrieveTodos(), [id]);
+  // Update data:
+  // 1. Call retrieve api to retrieve data from back end
+  // 2. Use onSubmit to get data from user in the front end
+  // 3. Call update api to return data to the back end
+  // 4. Use useNavigste to go back to todos list page
+  function retrieveTodos() {
+    if (id != -1) {
+      //If id!=1, means this is not a new todo.
+      retrieveTodoApi(username, id)
+        .then((response) => {
+          setDescription(response.data.description);
+          setargetDate(response.data.targetDate);
+        })
+        .catch((error) => console.log(error));
+    }
   }
 
   function onSubmit(values) {
-    console.log(values);
+    const todo = {
+      id: id,
+      // Use new data(value) got from user!
+      username: username,
+      description: values.description,
+      targetDate: values.targetDate,
+      done: false,
+    };
+    console.log(todo);
+    if (id == -1) {
+      addTodoApi(username, todo)
+        .then((response) => {
+          navigate("/todos");
+        })
+        .catch((error) => console.log(error));
+    } else {
+      updateTodoApi(username, id, todo)
+        .then((response) => {
+          navigate("/todos");
+        })
+        .catch((error) => console.log(error));
+    }
   }
 
   // If there are some errors, the validate will return the errors and onsubmit will not be called!
@@ -37,10 +71,10 @@ export default function TodoComponent() {
     if (values.description.length < 5) {
       errors.description = "Enter at least 5 characters";
     }
-    if (values.targetDate == "") {
+    if (values.targetDate == "" || moment(values.targetDate).isValid()) {
+      // Use moment to validate date
       errors.targetDate = "Enter a target date";
     }
-    console.log(values);
     return errors;
   }
   return (
@@ -48,7 +82,7 @@ export default function TodoComponent() {
       <h1>Enter Todo Details</h1>
       <div>
         {/* Create a form */}
-        {/* Here need to install two libs: formik and moment */}
+        {/* Here need to install two libs: formik(for create form) and moment(for validation) */}
         {/* Initialize Formik */}
         <Formik
           initialValues={{ description, targetDate }}
