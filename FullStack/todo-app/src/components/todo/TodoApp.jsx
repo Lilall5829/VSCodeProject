@@ -10,6 +10,7 @@ import FooterComponent from "./FooterComponent";
 import ListTodosComponent from "./ListTodosComponent";
 import ErrorComponent from "./ErrorComponent";
 import AuthProvider, { useAuth } from "./security/AuthContext";
+import TodoComponent from "./TodoComponent";
 
 import "./TodoApp.css";
 // Check only when you log in successfully you can be taken to the specific route like /todos, or you will be taken to log in page
@@ -52,6 +53,15 @@ export default function TodoApp() {
               element={
                 <AuthenticatedRoute>
                   <ListTodosComponent></ListTodosComponent>
+                </AuthenticatedRoute>
+              }
+            ></Route>
+            The following route is for update or new todos
+            <Route
+              path="/todo/:id"
+              element={
+                <AuthenticatedRoute>
+                  <TodoComponent></TodoComponent>
                 </AuthenticatedRoute>
               }
             ></Route>

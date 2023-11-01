@@ -8,10 +8,10 @@ import axios from "axios";
 // export const retrieveHelloWorldBean = () =>
 //   axios.get("http://localhost:8080/hello-world-bean");
 
-// const apiClient = axios.create({
-//   baseURL: "http://localhost:8080",
-// });
+const apiClient = axios.create({
+  baseURL: "http://localhost:8080",
+});
 
-// // How to get a parameter from URL:
-// export const retrieveHelloWorldBean = (username) =>
-//   apiClient.get(`/hello-world/path-variable/${username}`);
+// How to get a parameter from URL:
+export const retrieveHelloWorldBean = (username) =>
+  apiClient.get(`/hello-world/path-variable/${username}`);
