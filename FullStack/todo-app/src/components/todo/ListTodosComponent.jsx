@@ -45,7 +45,6 @@ function ListTodosComponent() {
   }
 
   function updateTodo(id) {
-    console.log("click" + id);
     navigate(`/todo/${id}`);
   }
 

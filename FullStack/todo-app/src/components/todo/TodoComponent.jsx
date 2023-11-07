@@ -13,6 +13,7 @@ export default function TodoComponent() {
   const [description, setDescription] = useState("");
   const [targetDate, setargetDate] = useState("");
   //   const { username, id } = useParams();
+  // useParams: get parameters from URL, such as id from '<Route path="/todo/:id" element={              <AuthenticatedRoute><TodoComponent></TodoComponent></AuthenticatedRoute>}></Route>'
   const { id } = useParams();
   const authContext = useAuth();
   const username = authContext.username;
@@ -71,7 +72,7 @@ export default function TodoComponent() {
     if (values.description.length < 5) {
       errors.description = "Enter at least 5 characters";
     }
-    if (values.targetDate == "" || moment(values.targetDate).isValid()) {
+    if (values.targetDate == "" || !moment(values.targetDate).isValid()) {
       // Use moment to validate date
       errors.targetDate = "Enter a target date";
     }

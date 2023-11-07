@@ -1,6 +1,6 @@
 import { useState } from "react";
 // Install browser router: npm install react-router-dom
-// Import 6 properties
+// Import properties
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import WelcomeComponent from "./WelcomeComponent";
 import LoginComponent from "./LoginComponent";
@@ -30,7 +30,7 @@ export default function TodoApp() {
           <HeaderComponent></HeaderComponent>
 
           <Routes>
-            {/* These routes like @Getmapping in Spring */}
+            {/* These routes seem like mapping requests in Spring */}
             <Route
               path="/"
               element={<LoginComponent></LoginComponent>}
@@ -43,10 +43,11 @@ export default function TodoApp() {
             <Route
               path="/welcome/:username"
               element={
+                // Put the component which need to be authenticated into AuthenticatedRoute
                 <AuthenticatedRoute>
                   <WelcomeComponent></WelcomeComponent>
                 </AuthenticatedRoute>
-              } // Put the component which need to be authenticated into AuthenticatedRoute
+              }
             ></Route>
             <Route
               path="/todos"
@@ -56,7 +57,7 @@ export default function TodoApp() {
                 </AuthenticatedRoute>
               }
             ></Route>
-            {/* The following route is for update or new todos */}
+            {/* The following route is for update todos */}
             <Route
               path="/todo/:id"
               element={

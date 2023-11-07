@@ -1,15 +1,21 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
-import { retrieveHelloWorldBean } from "./api/HelloWorldApiService";
+import { retrieveHelloWorldPathVariable } from "./api/HelloWorldApiService";
+import { useAuth } from "./security/AuthContext";
 export default function WelcomeComponent() {
   // Get the username from URL
   const { username } = useParams();
 
   const [message, setMessage] = useState(null);
 
+  const authContext = useAuth();
+
   function callHelloWorldRestApi() {
-    // Haed code the username here
-    retrieveHelloWorldBean(username)
+    // Hard code the username here
+    // retrieveHelloWorldPathVariable(username)
+
+    // Get token from context instead of hard code as before.
+    retrieveHelloWorldPathVariable(username, authContext.token)
       // response means the data returned back from the request of URL
       .then((response) => successfulResponse(response))
       .catch((error) => errorResponse(error))

@@ -13,11 +13,13 @@ export default function LoginComponent() {
   }
 
   function handlePasswordChange(event) {
+    // console.log(event);
+
     setPassword(event.target.value);
   }
-  function handleSubmit() {
-    // add a hard code authentication
-    if (authContext.login(username, password)) {
+  async function handleSubmit() {
+    // Authorization
+    if (await authContext.login(username, password)) {
       // When authenticate successfully, navigate to /welcome/username,and pass username to welcome page
       navigate(`/welcome/${username}`);
     } else {
